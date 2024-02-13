@@ -28,6 +28,24 @@ https://toolsqa.com/blogs/install-visual-studio-code/
 https://www.makeuseof.com/windows-vs-code-set-up-guide/
 https://www.how2shout.com/how-to/how-to-use-choco-to-install-visual-studio-code-on-windows-10.html
 
+### Extensiones de VSCode
+
+HTML Snippets
+
+<img width="563" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/414404f2-4815-4dd7-b2f3-2dc6ebc26f47">
+
+Live Server
+
+<img width="750" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/c57e835c-58e8-4701-9896-2e4b7e4740be">
+
+REST Client
+
+<img width="589" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/89122a93-179a-4c9d-a373-736281350c3f">
+
+JSON Crack
+
+<img width="558" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/0bcb0870-b50b-4024-b07a-0f7071fbbcb7">
+
 ## Git
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/186534f5-8e04-49fb-a693-f653b6307f6a)
