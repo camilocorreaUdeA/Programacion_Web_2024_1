@@ -8,13 +8,13 @@
 6. Agregue un archivo <i>README.md</i> (Use luego este archivo para consignar todos los comandos de git que utilice en el desarrollo de este ejercicio)
 7. Clone el repositorio en su máquina para tener una copia local
 8. Abra una nueva rama de trabajo en el repositorio llamada <i>new_features</i>
-9. Con ayuda del IDE instalado en su máquina cree un archivo con nombre <i>aboutme.html</i> y agregue allí el código disponible [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/blob/main/Historia_y_Conceptos/practica/aboutme_html.txt)
+9. Con ayuda del IDE instalado en su máquina cree un archivo con nombre <i>aboutme.html</i> y agregue allí el código disponible [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/blob/main/Historia_y_Conceptos/practica/aboutme_html.txt)
 10. Haga commit del cambio que acaba de realizar, agregue un mensaje que describa claramente lo que se hizo.
-11. De nuevo utilice el IDE para agregar un directorio al proyecto, con el nombre <i>styles</i>, dentro de este directorio agregue un archivo de nombre <i>aboutme.css</i> con el código disponible [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/blob/main/Historia_y_Conceptos/practica/aboutme_css.txt)
+11. De nuevo utilice el IDE para agregar un directorio al proyecto, con el nombre <i>styles</i>, dentro de este directorio agregue un archivo de nombre <i>aboutme.css</i> con el código disponible [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/blob/main/Historia_y_Conceptos/practica/aboutme_css.txt)
 12. Haga commit del cambio que acaba de realizar, agregue un mensaje que describa claramente lo que acaba de hacer.
 13. En el archivo <i>aboutme.html</i> modifique el contenido de los textos de las líneas 12, 16, 17, 21, 26, 28, 30, 32 con información relevante según sea el caso.
 14. Haga commit de esos cambios que acaba de realizar, agregue un mensaje que describa lo que hizo.
-15. Agregue un nuevo archivo <i>index.html</i> con el contenido disponible [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/blob/main/Historia_y_Conceptos/practica/index_html.txt)
+15. Agregue un nuevo archivo <i>index.html</i> con el contenido disponible [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/blob/main/Historia_y_Conceptos/practica/index_html.txt)
 16. Haga commit del paso anterior
 17. Reemplace el contenido de la línea 7 con lo siguiente (en el archivo aboutme.html):
     ```html
