@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>About Me</title>
+        <!-- Estilos personalizados para el sitio van aqui -->				
+	</head>
+	<body>
+		<header class='masthead'>
+            <p class='masthead-intro'>¡Hey hola, aquí</p>
+            <h1 class='masthead-heading'>TU_NOMBRE!</h1>
+          </header>
+          <section class="introduction-section">
+              <h1>Presentación</h1>
+              <p>¿Quien soy yo?</p>
+              <p>¿Qué me gusta hacer?</p>
+          </section>
+          <section class="location-section">
+              <h1>De dónde soy</h1>
+              <p>Yo nací en...</p>
+          </section>
+          <section class="questions-section">
+              <h1>Más datos acerca de mí</h1>
+              <h2>¿Practicas algún deporte?</h2>
+              <p>uhmm.....</p>
+              <h2>¿En qué te sueñas trabajando después de graduarte?</h2>
+              <p>Pues...</p>
+              <h2>¿Dónde vives actualmente?</h2>
+              <p>Yo vivo...</p>
+              <h2>¿Por qué quieres aprender programación web?</h2>
+              <p>Eh pues...</p>
+          </section>          
+          <footer class="content-footer">
+              <p>Dejame un saludo en mis redes sociales:</p>
+          </footer>
+	</body>
+</html>
