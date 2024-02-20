@@ -94,6 +94,16 @@ Para agregar un título, leyenda o pie de foto a la imagen puedes utilizar el el
   </figcaption>
 </figure>
 ```
+En HTML5 está disponible el elemento <code>picture</code> que otorga mayor flexibilidad para la implementación de sitios web "responsive" ya que en lugar de tener que hacer un escalamiento a la imagen de acuerdo con el valor de <i>viewport</i> entregado por el navegador se puede pasar un conjunto de imagenes en distintas escalas ajustables a distintos valores de <i>viewport</i>. Con el elemento <code>source</code> y sus atributos <code>media</code> y <code>srcset</code> se especifica una lista de opciones que se prueban en orden para encontrar la imagen que más se ajuste al ancho (width) del <i>viewport</i> del navegador.
+
+```html
+<picture>
+  <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+  <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+  <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+```
+
 ### Videos
 
 Existen diferentes alternativas para agregar videos a un documento HTML, nosotros solo veremos las dos de uso más extendido.
@@ -243,6 +253,8 @@ Y además recientemente vimos otros elementos semánticos que no propiamente est
 <code>img</code>: Permite incluir imágenes en el documento.
 
 <code>figure</code> y <code>figcaption</code>: usados para contener una imagen y proporcionar una descripción de esta.
+
+<code>picture</code>: Permite incluir imágenes en el documento HTML con orientación a una implementación "responsive".
 
 <code>video</code>: Para incluir un video en el documento HTML.
 
