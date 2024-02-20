@@ -14,14 +14,14 @@
 
 <p>Para poder definir esa estructura HTML permite la marcación del texto con etiquetas que el navegador interpreta para poder visualizar dicha estructura en pantalla. Dichas etiquetas son la unidad fundamental de HTML, permiten encerrar o delimitar parte del contenido para crear elementos HTML (que vamos a definir más adelante) que son los que dan la estructura y estilo al contenido.</p>
 
-<p>De acuerdo con el tipo de elemento que permite crear se puede agrupar las etiquetas de HTML en las siguientes categorías:</p>
+<p>De acuerdo con el tipo de elemento que permiten crear se puede agrupar las etiquetas de HTML en las siguientes categorías:</p>
 
 <ul>
   <li><b>Raíz principal</b>: Sólo hay una etiqueta en esta categoría y define el elemento de mayor jerarquía en el documento HTML.</li>
   <li><b>Documentación y metadatos</b>: Los metadatos proporcionan información de la página web, por ejemplo los estilos y scripts necesarios para renderizar la página en el navegador.</li>
-  <li><b>Cabeza y cuerpo de la página</b>: Las etiquetas de esta categoría engloban en sus interior los elementos que se despliegan o no en el navegador como por ejemplo el texto y los metadatos respectivamente.</li>
-  <li><b>Organización del contenido en secciones</b>: Permiten organizar el contenido en partes lógicas permitiendo crear un esquema general de la página web proporcionando elementos que permiten identificar secciones particulares del contenido.</li>
-  <li><b>Contenido textual</b>: Permiten organizar en bloques o secciones el contenido que se ubica en el cuerpo del documento HTML.</li>
+  <li><b>Cabeza y cuerpo de la página</b>: Dentro del elemento delimitado por la etiqueta head sea grupa el contenido no visible como contenido gráfico del sitio web en el navegador, mientras que con la etiqueta body se limita la sección donde van todos los elementos HTML que conforman el contenido  del sitio web que si visible y con el que se puede interactuar en el navegador.</li>
+  <li><b>Organización del contenido en secciones</b>: Son elementos qu permiten organizar el contenido en partes lógicas permitiendo crear un esquema general de la página web proporcionando elementos que permiten identificar secciones particulares del contenido.</li>
+  <li><b>Contenido textual</b>: Estos elementos permiten organizar en bloques o secciones el contenido que se ubica en el cuerpo del documento HTML.</li>
   <li><b>Semánticas de texto</b>: Permiten definir el significado, estructura o estilo de cualquier pieza de texto del contenido.</li>
   <li><b>Imágenes y multimedia</b>: Brindan soporte a distintos recursos multimedia como imágenes, video y audio.</li>
   <li><b>Contenido incrustado</b>: Permiten incrustar contenido externo en un punto específico del documento HTML, contenido como otras páginas web, contenido interactivo basado en plugins, etc.</li>
@@ -96,7 +96,7 @@ paréntesis angulares (<>). Esta etiqueta marca el lugar a partir del cual el el
 </html>
 ```
 <p>El <i>doctype</i></p>
-<p>Todos los documentos HTML comienzan con la declaración <code>!doctype html</code>”. El propósito de esta etiqueta es indicar al navegador la versión del lenguaje HTML que debería usarse para desplegar el documento. Nosotros no vamos a complicarnos y la vamos a utilizar tal y como la vemos actualmente ya que por defecto indica que se use la versión más reciente del leguaje, es decir, HTML5.</p>
+<p>Todos los documentos HTML comienzan con la declaración <code>!doctype html</code>”. El propósito de esta etiqueta es indicar al navegador la versión del lenguaje HTML que debería usarse para desplegar el documento. Nosotros no vamos a complicarnos y la vamos a utilizar tal y como la observamos en el ejemplo ya que por defecto indica que se use la versión más reciente del leguaje, es decir, HTML5.</p>
 
 <p>Elemento <i>html</i></p>
 
@@ -252,7 +252,7 @@ paréntesis angulares (<>). Esta etiqueta marca el lugar a partir del cual el el
   <p>Estoy aprendiendo <i>machine learning</i> en la universidad</p>
 </body>
 ```
-<p>mark: Resalta, si con color como un resaltador de tinta, una porción de texto.</p>
+<p>mark: Resalta, con color, la porción de texto delimitada por las etiquetas de apertura y cierre.</p>
 
 ```html
 <body>
