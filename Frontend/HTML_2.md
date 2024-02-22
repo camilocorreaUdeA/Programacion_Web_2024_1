@@ -80,7 +80,7 @@ Para agregar una imagen o un gif animado a un documento HTML se utiliza el eleme
   width="400"
   height="341" />
 ```
-Para agregar un título, leyenda o pie de foto a la imagen puedes utilizar el elemento <code>figure</code> en conjunto con el elemento <code>figcaption</code>. El primero es simplemente un contenedor, no necesariamente de imágenes, que proporciona una semántica que ayuda a dar estructura a todo el contenido de la página. Mientras que el segundo elemento sirve para dar una explicación o descripción  del contenido del elemento figure.
+Para agregar un título, leyenda o pie de foto a la imagen puedes utilizar el elemento <code>figure</code> en conjunto con el elemento <code>figcaption</code>. El primero es simplemente un contenedor, no necesariamente de imágenes, que proporciona una semántica que ayuda a dar estructura a todo el contenido de la página. Mientras que el segundo elemento sirve para dar una explicación o descripción  del contenido del elemento <code>figure</code>.
 
 ```html
 <figure>
