@@ -2,22 +2,22 @@
 
 ## Hipervínculos en un documento HTML
 
-<p>Los enlaces o hipervínculos son la esencia de la WWW son los que permiten establecer referencias entre distintos hipertextos. Es decir, son los que permiten que desde un sitio web podamos acceder a otro con solo dar clic en un enlace.</p>
+<p>Los enlaces o hipervínculos son la esencia de la WWW ya que permiten establecer referencias entre distintos hipertextos. Es decir, permiten que desde un sitio web podamos acceder a otro con solo dar clic en un enlace (hipervínculo).</p>
 
-<p>Para agregar enlaces a nuestros documentos HTML utilizamos el elemento <code>a</code>, <i>anchor</i> en español <i>ancla</i>, pero debemos tener en cuenta que no va a funcionar a menos de que especifiquemos un atributo en particular, en este caso es el atributo <code>href</code> o <i>hypertext reference</i> (referencia a hipertexto) donde especificamos el documento HTML que vamos a visitar luego de dar clic en el enlace.</p>
+<p>Para agregar enlaces a nuestros documentos HTML utilizamos el elemento <code>a</code>, <i>anchor</i>, en español <i>ancla</i>, pero debemos tener en cuenta que no va a funcionar a menos de que especifiquemos un atributo en particular, en este caso es el atributo <code>href</code> o <i>hypertext reference</i> (referencia a hipertexto) donde especificamos la URL el documento HTML que vamos a cargar en el navegador luego de dar clic en el enlace.</p>
 
 ```html
-  <a href=”http://www.enlace.com”>Este es un hipervinculo</a>
+  <a href=”http://www.enlace.com”>Este es un hipervínculo</a>
 ```
-<p>Un enlace definido como acabamos de ver va a abrir la nueva página en la misma pestaña del navegador de la página en la que estamos en ese momento. Si queremos que en enlace abra la página en una pestaña nueva debemos agregar el atributo <code>target</code> con el valor <code>_blank</code></p>
+<p>Un enlace definido como acabamos de ver va a abrir la nueva página en la misma pestaña del navegador de la página en la que estamos en ese momento. Si queremos que el enlace abra la página en una pestaña nueva debemos agregar el atributo <code>target</code> con el valor <code>_blank</code></p>
 
 ```html
 <a href=”http://www.enlace.com” target=”_blank”>Este abre en una nueva pestaña</a>
 ```
 Existen 3 tipos de enlaces que podemos crear:
 
-1. Enlaces a recursos externos que están disponibles a través de Internet.
-2. Enlaces a recursos internos que están en los directorios donde se almacena el documento HTML que los referencia.
+1. Enlaces a recursos externos que están disponibles en Internet.
+2. Enlaces a recursos internos que están en los directorios donde se almacena el documento HTML que los referencia (otros componentes del sitio web).
 3. Enlaces a ubicaciones específicas dentro de un documento HTML (anclas).
 
 Para los enlaces del primer tipo utilizamos lo que se conoce como referencias absolutas o dicho de otro modo la URL completa del recurso. Como se vio anteriormente en la sección de Historia y Conceptos una URL es su forma más básica está compuesta de la siguiente forma: <code>protocolo://nombre-dominio/ruta-recurso</code>
@@ -57,8 +57,8 @@ Y el enlace debe construirse de la siguiente manera utilizando el símbolo # y e
 Buenas prácticas a la hora de crear hipervínculos:
 <ul>
   <li>Siempre es una buena idea incluir palabras clave en el texto de los hipervínculos para que describan de manera efectiva lo que se está tratando de vincular.</li>
-  <li>Por ningún motivo use la URL como texto del hipervínculo.</li>
-  <li>Evite usar palabras como “hipervínculo”, “enlace”, “link” o “clic aquí”  en el texto del hipervínculo.</li>
+  <li>No hay motivación para que use la URL como texto del hipervínculo.</li>
+  <li>Evite usar palabras como “hipervínculo”, “enlace”, “link” o “clic aquí” en el texto del hipervínculo.</li>
   <li>Trate de que los textos del hipervínculo sean breves y concisos.</li>
 </ul>
 
