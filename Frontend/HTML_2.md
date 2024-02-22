@@ -170,11 +170,11 @@ Elemento <code>iframe</code>
 
 Este elemento permite incrustar en tu sitio web contenido de terceros (documentos HTML, videos, aplicativos, plugins, etc.) sobre el que no se tiene control directo y se quiere aprovechar tal cual está hecho por ejemplo videos de Youtube, mapas de Google Maps, sistemas de comentarios como el de Disqus, modales con trinos de Twitter o posts de Facebook, etc.
 
-Vale la pena mencionar que debido a que el elemento iframe permite incrustar contenido HTML que es totalmente independiente del contenido de tu sitio web y que por tanto tiene su propio contexto de navegación (es como si estuvieras visitando un sitio web desde otro sitio web), luego cualquier Javascript o CSS que tengas aplicado a tu sitio no tiene ningún efecto sobre lo que hayas incrustado con iframe.
+Vale la pena mencionar que debido a que el elemento <code>iframe</code> permite incrustar contenido HTML que es totalmente independiente del contenido de tu sitio web y que por tanto tiene su propio contexto de navegación (es como si estuvieras visitando un sitio web desde otro sitio web), luego cualquier Javascript o CSS que tengas aplicado a tu sitio no tiene ningún efecto sobre lo que hayas incrustado con <code>iframe</code>.
 
-Se recomienda el uso del elemento iframe sólo cuando sea estrictamente necesario y en muy contadas ocasiones ya que puede acarrear problemas de seguridad a tu sitio web.
+Se recomienda el uso del elemento <code>iframe</code> sólo cuando sea estrictamente necesario y en muy contadas ocasiones ya que puede acarrear problemas de seguridad a tu sitio web.
 
-A continuación veremos dos ejemplos puntuales del uso del elemento iframe, en primer lugar como incrustar un video de Youtube y luego un mapa de Google Maps:
+A continuación veremos dos ejemplos puntuales del uso del elemento <code>iframe</code>, en primer lugar como incrustar un video de Youtube y luego un mapa de Google Maps:
 
 Para incrustar un video de Youtube vaya al video y de clic en la opción compartir y luego en la opción insertar y copie el código que allí le proporcionan.
 
