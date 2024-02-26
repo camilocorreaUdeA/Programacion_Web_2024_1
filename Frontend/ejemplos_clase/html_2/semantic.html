@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semantico</title>
+    <style>
+        main {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside article"
+                "footer footer";
+            grid-template-columns: 1fr 2fr;
+            width: 800px;
+            height: 600px;
+        }
+
+        header {
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgba(80, 146, 251, 0.54);
+            font-size: 25px;
+            font-weight: bold;
+            grid-area: header;
+        }
+
+        nav {
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgba(137, 251, 80, 0.54);
+            font-size: 25px;
+            font-weight: bold;
+            grid-area: nav;
+        }
+
+        aside {
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgba(251, 120, 80, 0.48);
+            font-size: 25px;
+            font-weight: bold;
+            grid-area: aside;
+        }
+
+        article {
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgba(251, 80, 80, 0.67);
+            font-size: 25px;
+            font-weight: bold;
+            grid-area: article;
+        }
+
+        footer {
+            border: 2px solid black;
+            text-align: center;
+            background-color: rgba(251, 249, 80, 0.48);
+            font-size: 25px;
+            font-weight: bold;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            header
+        </header>
+        <nav>
+            nav
+        </nav>
+        <aside>
+            aside
+        </aside>
+        <article>
+            <section>article</section>
+        </article>
+        <footer>
+            footer
+        </footer>
+    </main>
+</body>
+</html>
