@@ -21,20 +21,10 @@ El PoC del sitio web que la agencia quiere debe cumplir con los siguientes requi
 5. Items a tener en cuenta para el desarrollo de las páginas:
 <ul>
   <li>Se deben construir utilizando HTML para su estructura, es decir, deben contar con <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>footer</code> y <code>aside</code> (este último solo donde aplique o sea necesario)</li>
-  <li>En el <code>header</code> debe haber un encabezado con que identifique a la cocina y una imagen del país a la que pertenece.</li>
-  <li>En el <code>nav</code> se deben incluir un menú de navegación a todas las páginas que componen el sitio web</li>
-  <li>En cada <code>main</code> debe tener un encabezado que permita identificar el tema que se trata en la página (si es un platillo o si es la página de ingredientes)</li>
-  <li>En el <code>main</code> de la página principal debe tener dos <code>section</code> uno para hacer una introducción a los platillos (cada uno en su propio <code>article</code> y con un enlace a su respectiva página) y en el otro una introducción a los ingredientes con enlace a esa página</li>
-  <li>En el <code>main</code> de las páginas de los platillos incluya <code>section</code> para la descripción del platillo, otro para sus ingredientes y modo de preparación, no olvide incluir una imagen del platillo ;-)</li>
-  <li>En el <code>main</code> de la página de ingredientes haga una <code>section</code> para cada ingrediente quee incluya <code>article</code> para una corta descripción del ingrediente, otro para una lista de platillos en los que se puede encontrar ese ingrediente. Incluya imagenes del ingrediente</li>
-  <li>En el <code>footer</code> solo agregue una frase como <i>Sitio web de comida xyz desarrollado por tu_nombre. Contacto: tu_correo_electrónico</i></li>  
-</ul>
-
-Otros aspectos que se deben validar:
-<ul>
-<li>Todas las páginas comparten el mismo <code>header</code>, <code>nav</code> y <code>footer</code></li>
-<li>Apuestele a su creatividad y aproveche la mayor cantidad de resursos que pueda incluir en sus páginas (imágenes, videos, gifs animados, enlaces a contenido externo, etc.)</li>
-<li>No se preocupe por el aspecto del sitio, por el momento solo nos interesa la funcionalidad y la estructura del mismo, más adelante cuando estudiemos las hojas de estilo con <i>CSS</i> tendremos oprtunidad de mejorar la parte visual</li>
+  <li>En el <code>header</code> debe haber un encabezado con el que identifique el sitio turístico con su respectivo nombre y una imagen alusiva.</li>
+  <li>En el <code>nav</code> se debe incluir un menú de navegación a todas las páginas que componen el sitio web</li>
+  <li>En el <code>main</code> de cada página debe tener elementos <code>section</code> y <code>article</code> para los localizar los contenidos requeridos en el PoC.</li>
+  <li>Recuerde agregar un <code>footer</code> con su información de desarrollador <i>Sitio Agencia Travel Partner desarrollado por &lt;tu_nombre&gt;. Contacto: &lt;tu_correo_electrónico&gt;</i></li>  
 </ul>
 
 6. Cree un repositorio en su cuenta github para este ejercicio y nombrelo <i>travel_partners_agency</i>. Todos los archivos que conforman el sitio web deben ser guardados allí.
