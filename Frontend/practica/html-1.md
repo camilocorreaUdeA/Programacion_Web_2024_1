@@ -35,4 +35,14 @@ El PoC del sitio web que la agencia quiere debe cumplir con los siguientes requi
 
 ## Entrega: Responder al correo de entrega (que se va a enviar en el transcurso de la semana) con el enlace al sitio web (URL de Github pages)
 
+## Ejemplo
+
+El resultado final debería ser algo similar a lo que se observa en las siguientes imágenes
+
+![image](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/30f4c9ee-32b2-4401-a086-a83b5c844f6a)
+
+![image](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/ae74ae21-dae3-44c5-9ce4-aed35bcf2834)
+
+
+
 
