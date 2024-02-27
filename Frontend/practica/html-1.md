@@ -20,8 +20,8 @@ El PoC del sitio web que la agencia quiere debe cumplir con los siguientes requi
 
 1. Cree un repositorio en su cuenta github para este ejercicio y nombrelo <i>travel_partners_agency</i>. Todos los archivos que conforman el sitio web deben ser guardados allí.
 6. Publique su sitio web: Github te permite publicar tu sitio web para que pueda ser visitado. Sigue los pasos a continuación para que tu sitio quede publicado en una URL así: &lt;tu-usuario-de-github&gt;.github.io/travel_partners_agency (Ejem: https://camilocorreaudea.github.io/repo_remoto_ssh). Siga los pasos a continuación:
-<p>&#8627; Asegurese que su repositorio si tiene un archivo que se llama <code>index.html</code> sino entonces debe tener uno con ese nombre (el de página principal)</p>
-<p>&#8627; Vaya a la opción <i>Settings de su repositorio</i></p> (la opción Settings con el ícono de la rueda dentada)
+<p>&#8627; Asegurese de que su repositorio si tiene un archivo que se llama <code>index.html</code> sino entonces debe tener uno con ese nombre (el de página principal)</p>
+<p>&#8627; Vaya a la opción <i>Settings de su repositorio</i> (la opción Settings con el ícono de la rueda dentada)</p> 
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/7a41b02c-b674-499e-8b01-8b69d0b19d6f)
 
