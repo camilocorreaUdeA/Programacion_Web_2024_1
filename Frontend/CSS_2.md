@@ -114,7 +114,7 @@ Ejemplo diponible [aquí](https://codepen.io/camilocorreaUdeA/pen/qBwdrRK)
 
 ### Agrupación de selectores
 
-Cuando hay una regla que se puede (o se debe) aplicar a varios elementos al tiempo pero no hay un selector de los que hemos visto que los agrupe a todos al tiempo en un mismo conjunto, y además en aras de evitar crear reglas duplicadas para los distintos elementos, existe la posibilidad de agrupar varios selectores en la definición de una regla. Solo es especificar los selectores separados por coma (<code>,</code>), la regla luego aplica a todos los selectores que se han especificado.
+Cuando hay una regla que se puede (o se debe) aplicar a varios elementos al tiempo pero no hay un selector de los que hemos visto que los agrupe a todos al tiempo en un mismo conjunto, y además en aras de evitar crear reglas duplicadas para los distintos elementos, existe la posibilidad de agrupar varios selectores en la definición de una regla. Basta con especificar los selectores separados por coma (<code>,</code>), la regla luego aplica a todos los selectores que se han especificado.
 
 ```css
 strong,
