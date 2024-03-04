@@ -110,6 +110,7 @@ En la lista a continuación podemos observar las distintas formas que nos permit
      font-family: Courier;      
   }
 ```
+Ejemplo diponible [aquí](https://codepen.io/camilocorreaUdeA/pen/qBwdrRK)
 
 ### Agrupación de selectores
 
