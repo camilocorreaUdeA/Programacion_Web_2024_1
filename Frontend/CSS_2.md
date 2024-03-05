@@ -431,6 +431,6 @@ Esta es la instancia final para el desempate definitivo entre dos reglas en conf
 
 Si las reglas están definidas en un archivo externo de hoja de estilos la regla que esté definida más al final del archivo, entre las que están en conflicto, va a ser la que va terminar siendo aplicada.
 
-Si un documento HTML tiene varios elementos <code>link</code> que referencian a diferentes archivos de hojas de estilo CSS, el elemento <code>link</code> que esté de último va a ser el de mayor especificidad. Aplica lo mismo para los elementos <code>style</code>. El razonamiento es tambipen válido para combinaciones entre elementos <code>link</code> y <code>style</code>.
+Si un documento HTML tiene varios elementos <code>link</code> que referencian a diferentes archivos de hojas de estilo CSS, el elemento <code>link</code> que esté de último va a ser el de mayor especificidad. Aplica lo mismo para los elementos <code>style</code>. El razonamiento es también válido para combinaciones entre elementos <code>link</code> y <code>style</code>.
 
-Por último cualquier estilo en línea utilizando el atributo <code>style</code> de un elememento (<i>inline style</i>) tiene la mayor especificidad con respecto a cualquier otra regla, es decir, los estilos en línea sobreescriben cualquier regla definida en un archivo externo de hojas destilo o en un elemento <code>style</code>. 
+Por último cualquier estilo en línea utilizando el atributo <code>style</code> de un elememento (<i>inline style</i>) tiene la mayor especificidad con respecto a cualquier otra regla, es decir, los estilos en línea sobrescriben cualquier regla definida en un archivo externo de hojas destilo o en un elemento <code>style</code>. 
