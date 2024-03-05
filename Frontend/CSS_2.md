@@ -110,7 +110,7 @@ En la lista a continuación podemos observar las distintas formas que nos permit
      font-family: Courier;      
   }
 ```
-Ejemplo diponible [aquí](https://codepen.io/camilocorreaUdeA/pen/qBwdrRK)
+Ejemplo disponible [aquí](https://codepen.io/camilocorreaUdeA/pen/qBwdrRK)
 
 ### Agrupación de selectores
 
@@ -124,6 +124,7 @@ em,
   background-color:yellow;
 }
 ```
+Ejemplo disponible [aquí](https://codepen.io/camilocorreaUdeA/pen/jORPXqb)
 
 ### Pseudo clases y pseudo elementos
 
