@@ -317,6 +317,7 @@ a.udea:hover{
     padding: .5em;
 }    
 ```
+Ejemplo disponible [aquí](https://codepen.io/camilocorreaUdeA/pen/GRLpRpv?editors=1100) <br>
 
 ## La cascada de CSS
 
