@@ -203,6 +203,8 @@ A continuación la lista de pseudo elementos disponibles en CSS:
   </body>
 </html>
 ```
+Ejemplo disponible [aquí](https://codepen.io/camilocorreaUdeA/pen/xxeGBvr)
+
 ### Combinaciones
 
 Selector de descendientes (<i>descendant combinator</i>)
