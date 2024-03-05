@@ -158,6 +158,7 @@ a:hover{
   font-weight: bold;
 }
 ```
+Ejemplo disponible [aquí](https://codepen.io/camilocorreaUdeA/pen/RwOPEez)
 Puedes ver una lista completa de pseudo clases disponibles en CSS aquí: [Pseudoclases](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
 Los pseudo elementos a diferencia de las pseudo clases no observan del estado actual del elemento para agregarle implicitamente una clase, sino que permiten insertar nuevos elementos HTML a través de CSS. Para construir un selector con pseudo elementos se utiliza doble dos puntos (<code>::</code>) seguido del pseudo elemento que se pretende utilizar.
