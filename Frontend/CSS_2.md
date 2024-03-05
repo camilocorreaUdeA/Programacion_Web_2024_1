@@ -228,6 +228,7 @@ ul li{
   border: 2px solid blue;
 }
 ```
+Ejemplo disponible [aquí](https://codepen.io/camilocorreaUdeA/pen/dyLoLrr) <br>
 
 Selector de descendientes directos o hijos (child combinator)
 
