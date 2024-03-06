@@ -152,6 +152,7 @@ Esta propiedad también puede tener el valor <i>inline-block</i> que permite que
 
 Posibles valores para la propiedad <code>display</code>:
 <ul>
+  <li><code>none</code>: Oculta el elemento de modo que no es visible en el navegador web.</li>
   <li><code>block</code>: Elementos de bloque que ocupan todo el ancho del elemento contenedor y se apilan uno tras otro separados por el margen externo</li>
   <li><code>inline</code>: Elementos de línea que se ubican de manera contigua en una misma línea y cuyas dimensiones son las mismas de su propio contenido.</li>
   <li><code>inline-block</code>: Elementos que se comportan como si fueran de línea pero con la posibilidad de manipular sus dimensiones.</li>
