@@ -614,9 +614,9 @@ En el siguiente ejemplo con la propiedad <code>align-items</code> ubicamos la co
 ```html
 <body>
   <div class="flex-container">
-    <div class="flex-item one">1</div>
-    <div class="flex-item two">2</div>
-    <div class="flex-item three">3</div>    
+    <div class="flex-item" id="one">1</div>
+    <div class="flex-item" id="two">2</div>
+    <div class="flex-item" id="three">3</div>    
   </div>
 </body>
 ```
@@ -627,6 +627,14 @@ En el siguiente ejemplo con la propiedad <code>align-items</code> ubicamos la co
   background-color:rgba(251, 80, 80, 0.17);
 }
 
+#one, #three{
+  flex: 1;
+}
+
+#two{
+  flex:2;
+}
+
 .flex-item{
   border:2px solid black;
   margin: 10px;
@@ -635,13 +643,6 @@ En el siguiente ejemplo con la propiedad <code>align-items</code> ubicamos la co
   text-align:center;
 }
 
-.one, .three{
-  flex:1;
-}
-
-.two{
-  flex:4;
-}
 
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/ae1fcd8a-233c-4e4f-a59a-368170cf2422)
