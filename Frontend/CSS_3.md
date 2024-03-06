@@ -19,13 +19,11 @@ Los elementos de bloque se ubican en pantalla en una línea exclusiva ocupando p
 
 ```html
 <body>
-<div>
   <h1>Aplicaciones Web</h1>
   <p>She was infatuated with color. She didn't have a favorite color per se, but she did have a fondness for teals and sea greens. 
   You could see it in the clothes she wore that color was an important part of her overall style. She took great pride that color 
   flowed from her and that color was always all around her. That is why, she explained to her date sitting across the table, that 
   she could never have a serious relationship with him due to the fact that he was colorblind.</p>
-</div>
 </body>
 ```
 ```css
@@ -42,7 +40,7 @@ p{
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/66cd900c-2cf4-43e3-b97e-789bf5ae0433)
 
-En el ejemplo vemos 2 elementos de bloque: <code>h1</code> y <code>p</code>, podemos observar lo que se había comentado anteriormente, que ocupan todo el ancho del elemento contenedor (en este caso un elemento <code>div</code>), están apilados uno sobre otro de acuerdo con el orden de aparición en el documento HTML y su dimensión vertical se ajusta al tamaño del contenido (observe que el párrafo tiene más dimensión vertical que el encabezado). Además se puede observar la separación entre los dos elementos (para esto hemos resaltado el border) como consecuencia de que por defecto los elemento de bloque tienen la propiedad margin.
+En el ejemplo vemos 2 elementos de bloque: <code>h1</code> y <code>p</code>, podemos observar lo que se había comentado anteriormente, que ocupan todo el ancho del elemento contenedor (en este caso un elemento <code>body</code>), están apilados uno sobre otro de acuerdo con el orden de aparición en el documento HTML y su dimensión vertical se ajusta al tamaño del contenido (observe que el párrafo cuenta con una mayor dimensión vertical que el encabezado). Además se evidencia una separación entre los dos elementos (para esto es que hemos resaltado el border), lo cual se esperaba ya que por defecto los elemento de bloque tienen algún valor en la propiedad margin, usualmente en margin-top y margin-bottom.
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/647c2f8e-9ed9-4456-9f5d-fe0c3d7a27f6)
 <p>Se puede observar en la imagen que el margin por defecto asignado al elemento <code>h1</code> es de 46.9px y solo en las direcciones arriba y abajo.</p>
