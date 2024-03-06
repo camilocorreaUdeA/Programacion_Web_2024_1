@@ -241,7 +241,7 @@ En el ejemplo siguiente, los pixeles restantes luego de separar los 200px para l
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/f6bc01c4-14c2-4020-b76a-2eecbe8c13b8)
 
-Para definir diseños más dinámicos y complejos las propiedades <code>grid-column</code> y <code>grid-row</code> permiten  definir sobre cuáles columnas o filas se debe desplegar un elemento, des está forma se puede tener elementos que ocupan varias y columnas y filas al tiempo, y de esa forma romper con la cuadrícula tradicional perimitiendo diseños más dinámicos donde hay secciones de mayores dimensiones que otras.
+Para definir diseños más dinámicos y complejos las propiedades <code>grid-column</code> y <code>grid-row</code> permiten  definir sobre cuáles columnas o filas se debe desplegar un elemento, de esta forma se puede tener elementos que ocupan varias columnas y filas al mismo tiempo. De esa forma es posible romper con la cuadrícula tradicional perimitiendo diseños más dinámicos donde hay cuadrículas que cuentan con dimensiones mayores en comparación las otras.
 
 ```html
 <body>
