@@ -15,7 +15,7 @@ Ahora, primero que todo debemos hacer una distinción entre los elementos HTML s
   <li>Elementos de línea (<i>Inline-level elements</i>)</li>
 </ul>
 
-Los elementos de bloque se ubican en pantalla en una línea exclusiva ocupando por completo el ancho de línea del elemento padre (si el elemento padre es el body, entonces será todo el ancho de pantalla), y se apilan uno por debajo del otro de manera sucesiva y de acuerdo al orden de aparición en el documento HTML.
+Los elementos de bloque se ubican en pantalla en una línea exclusiva ocupando por completo el ancho de asignado para el contenido del elemento padre (ejemplo: si el elemento padre es el <code>body</code>, entonces será todo el ancho de pantalla), y se apilan uno por debajo del otro de manera sucesiva y de acuerdo al orden de aparición en el documento HTML.
 
 ```html
 <body>
