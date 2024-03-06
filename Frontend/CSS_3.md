@@ -169,7 +169,6 @@ CSS grid es un sistema de maquetación en dos dimensiones que permite organizar 
   <li>Para especificar el número de columnas y el ancho de las mismas se utiliza la propiedad <code>grid-template-columns</code></li>
   <li>Para especificar el número de filas de la cuadrícula y la altura de las mismas se utiliza la propiedad <code>grid-template-rows</code></li>
   <li>Para determinar el espacio entre filas se utiliza la propiedad <code>grid-row-gap</code>. Para las columnas la propiedad <code>grid-column-gap</code>, o bien el mismo valor para ambos con la propiedad <code>grid-gap</code></li>
-  <li></li>
 </ul>
 
 Por ejemplo una cuadrícula de 6x6 (de 200px por 200px cada celda) con espacio entre columnas y filas de 15px:
