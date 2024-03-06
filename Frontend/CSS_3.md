@@ -156,8 +156,8 @@ Posibles valores para la propiedad <code>display</code>:
   <li><code>block</code>: Elementos de bloque que ocupan todo el ancho del elemento contenedor y se apilan uno tras otro separados por el margen externo</li>
   <li><code>inline</code>: Elementos de línea que se ubican de manera contigua en una misma línea y cuyas dimensiones son las mismas de su propio contenido.</li>
   <li><code>inline-block</code>: Elementos que se comportan como si fueran de línea pero con la posibilidad de manipular sus dimensiones.</li>
-  <li><code>grid</code>: Elementos de bloque qu permiten maquetar los elementos en su contenido de acuerdo al modelo grid de CSS</li>
-  <li><code>flex</code>: Elementos de bloque qu permiten maquetar los elementos en su contenido de acuerdo al modelo flexbox de CSS</li>
+  <li><code>grid</code>: Elementos de bloque que permiten maquetar los elementos en su contenido de acuerdo al modelo grid de CSS</li>
+  <li><code>flex</code>: Elementos de bloque que permiten maquetar los elementos en su contenido de acuerdo al modelo flexbox de CSS</li>
 </ul>
 
 ### Maquetación con CSS Grid
