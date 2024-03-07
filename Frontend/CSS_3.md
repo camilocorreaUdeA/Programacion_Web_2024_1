@@ -393,7 +393,7 @@ footer{
 
 Flexbox es un mecanismo para posicionar elementos de un documento HTML en filas y columnas. Flexox utiliza dos tipos de "cajas": <i>flex containers</i> y <i>flex items</i>. Los flex containers sirven para agrupar varios flex items y definir la forma de posicionarlos. Con CSS se especifica de forma explicita cuando un elemento HTML es un flex container pero en el caso de un flex item este solo será tal si está contenido en un flex container, de forma que la única tarea de los flex items es indicar al flex container cuántos elementos este debe tener en cuenta para posicionar o maquetar.
 
-Un elemento HTML puede ser un flex container y un flex item al mismo tiempo, siempre y cuando esté contenido dentro de otro flex container y al tiempo se un flex container para otros elementos (sus flex items en ese caso).
+Un elemento HTML puede ser un flex container y un flex item al mismo tiempo, siempre y cuando esté contenido dentro de otro flex container y al tiempo ser un flex container para otros elementos (sus propios flex items en ese caso).
 
 Para definir un elemento como flex container simplemente se utiliza la propiedad <code>display</code> dandole el valor <code>flex</code>, luego se debe definirla disposición de los flex items dentro del flex container. Vale la pena observar que con el modelo flexbox la posición de los elementos se determina en el elemento contenedor y no en los mismos elementos, que es como se haría usualmente en otros modelos de maquetación.
 
