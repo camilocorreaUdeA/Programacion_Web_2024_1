@@ -395,9 +395,9 @@ Flexbox es un mecanismo para posicionar elementos de un documento HTML en filas 
 
 Un elemento HTML puede ser un flex container y un flex item al mismo tiempo, siempre y cuando esté contenido dentro de otro flex container y al tiempo ser un flex container para otros elementos (sus propios flex items en ese caso).
 
-Para definir un elemento como flex container simplemente se utiliza la propiedad <code>display</code> dandole el valor <code>flex</code>, luego se debe definirla disposición de los flex items dentro del flex container. Vale la pena observar que con el modelo flexbox la posición de los elementos se determina en el elemento contenedor y no en los mismos elementos, que es como se haría usualmente en otros modelos de maquetación.
+Para definir un elemento como flex container simplemente se utiliza la propiedad <code>display</code> dandole el valor <code>flex</code>, luego se debe definir la distribución de los flex items dentro del flex container. Vale la pena observar que con el modelo flexbox la posición de los elementos se determina en el elemento contenedor y no en los elementos a ser contenidos, que es como se haría por lo general en otros modelos de maquetación.
 
-Para distribuir los flex items dentro del flex container se puede utilizar la propiedad <code>justify-content</code> que entre otros puede tener los siguiente valores para determinar la distribución de los elementos:
+Para distribuir los flex items dentro del flex container se puede utilizar la propiedad <code>justify-content</code> que puede tener los siguientes valores (hay más) para determinar la distribución de los elementos:
 <ul>
   <li>center</li>
   <li>flex-start</li>
@@ -435,9 +435,9 @@ Por ejemplo, alineando los flex items en el centro del flex container, para esto
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/7fbc5c8f-3a3b-4479-821a-7b873c51ec9b)
 
-Aquí es importante anotar que a pesar de que los flex items son elementos de bloque (son elementos div) flexbox los acomoda como si fueran elementos de línea.
+En el ejemplo anterior se puede notar que a pesar de que los flex items son elementos de bloque (elementos div) flexbox los acomoda como si fueran elementos de línea.
 
-Pro ejemplo si quisieramos distribuir los flex items en todo el ancho del flex container de forma que queden igualmente espaciados, usamos <code>justify-content</code> con el valor <code>space-around</code>:
+Pro ejemplo si quisieramos distribuir los flex items en todo el ancho del flex container de forma que queden igualmente espaciados, podemos usar <code>justify-content</code> con el valor <code>space-around</code>:
 
 ```html
 <body>
@@ -465,9 +465,9 @@ Pro ejemplo si quisieramos distribuir los flex items en todo el ancho del flex c
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/d9c71816-35a5-456a-b9fa-7d51475bbc39)
 
-Anteriormente habíamos comentado que un elemento puede tener los roles de flex container y flex item al mismo tiempo, esta característica es de bastante utilidad ya que un flex container solo puede detallar la distribución de sus descendientes directos, así que las distribuciones no aplican a descendientes de mayor nivel de anidamiento. Por lo tanto los flex items que tengan descendientes deben a su vez ser flex containers para que sea posible posicionar esos descendientes utlizando el modelo flexbox.
+Anteriormente habíamos comentado que un elemento puede tener los roles de flex container y flex item al mismo tiempo, esta característica es de bastante utilidad ya que un flex container solo puede detallar la distribución de sus descendientes directos, por tanto la distribución de los felx items no se hereda y no aplica a descendientes de mayor nivel de anidamiento. De ese modo los flex items que tengan descendientes deben a su vez ser flex containers para que sea posible posicionar esos descendientes utlizando el modelo flexbox.
 
-Sigamos con el ejemplo que venimos trabajando pero en esta ocasión agrupemos dos de los flex items en un nuevo contenedor que servirá como flex container para ellos y como flex item para el flex container orginal.
+Sigamos con el ejemplo que venimos trabajando, pero en esta ocasión agrupemos dos de los flex items en un nuevo contenedor que servirá como flex container para ellos y como flex item para el flex container original.
 
 ```html
 <body>
@@ -504,7 +504,7 @@ Sigamos con el ejemplo que venimos trabajando pero en esta ocasión agrupemos do
 
 De momento hemos visto que con la propiedad <code>justify-content</code> podemos controlar la distribución de los flex items a lo ancho del flex container, esto es generalmente útil cuando la altura (height) del flex container no es significativamente diferente a la de los flex items, tal como vimos en los ejemplos anteriores. Pero en los casos donde el flex container tiene una altura definida y que es comparable a la de los flex items va a ser necesario una propiedad que nos permita alinear también de manera vertical los flex items en el espacio del flex container. Esto último lo podemos lograr con la propiedad <code>align-items</code> que nos va a permitir mover los flex items desde arriba hasta abajo del flex container (y también estirarlos) según nuestra necesidad.
 
-Los posibles valores para la propiedad son los siguientes:
+Los posibles valores para dicha propiedad son los siguientes:
 <ul>
   <li>center</li>
   <li>flex-start</li>
@@ -556,7 +556,7 @@ Poniendo los flex items en la parte baja del flex container:
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/47a2bc5e-cbfd-4b5e-9413-78c0c53a536c)
 
-O estirandolos en toda la altura del flex container:
+O estirandolos en la dimensión vertical del flex container:
 
 ```css
 .flex-container{
@@ -569,7 +569,7 @@ O estirandolos en toda la altura del flex container:
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/13c546b3-f034-48e9-be78-13b8b3d5d5ae)
 
-Hasta ahora nos hemos enfocado en flex items se se despliegan a lo ancho del flex container como formando filas donde cada flex items se ubica justo al lado del otro hasta ocupar todo el ancho del flex container. Es posible cambiar la dirección de disposición de los flex items para que también puedan desplegarse de manera vertical, esto se logra con una simple propiedad: <code>flex-direction</code> que permite indicar si los flex items se distribuyen en forma de fila horizontal o de columna vertical.
+Hasta ahora nos hemos enfocado en flex items se se despliegan a lo ancho del flex container como formando filas donde cada flex item se ubica al lado de otro hasta ocupar todo el ancho del flex container. Es posible cambiar la dirección de disposición de los flex items para que también puedan desplegarse de manera vertical, esto se logra con una simple propiedad: <code>flex-direction</code> que permite indicar si los flex items se distribuyen en forma de fila horizontal o de columna vertical.
 
 Algo que se debe considerar cuando se decide distribuir los flex items en forma de columna y es que las propiedades <code>justify-content</code> y <code>align-items</code> intercalan su funcionalidad, es decir la primera actuará tal cual lo hace cuando los flex items están en fila, es decir, <code>justify-content</code> va a controlar la posición de los flex items en dirección vertical, mientras que <code>align-items</code> va a permitir desplazar la columna a lo ancho (en la dirección horizontal) del flex container.
 
@@ -607,7 +607,7 @@ En el siguiente ejemplo con la propiedad <code>align-items</code> ubicamos la co
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/23e5f543-7f3f-45fc-8649-8f85bf78e648)
 
-¿Recuerdas que con el modelo de maquetación grid podíamos fraccionar el contenedor en partes iguales y luego asignar fracciones a los contenidos para tener cuadrículas en las que no necesariamente los elementos tenían las mismas dimensiones? Pues con el modelo flexbox también se puede hacer algo semejante, podemos definir individualmente el ancho que ocuparán los flex items dentro del flex container con la ayuda de la propiedad <code>flex</code>. Esta propiedad se utiliza en los flex items para indicar que tanto se debe "estirar" su ancho para ocupar cierta cantidad de espacio dentro del flex container. Por ejemplo, un flex item con un valor de 2 en la propiedad <code>flex</code> ocupará dos veces el ancho que ocuparía un flex item con un valor de 1.
+¿Recuerdas que con el modelo de maquetación grid podíamos fraccionar el contenedor en partes iguales y luego asignar fracciones a los contenidos para tener cuadrículas en las que no necesariamente los elementos tenían las mismas dimensiones? Pues con el modelo flexbox también se puede hacer algo semejante, podemos definir individualmente el ancho que ocuparán los flex items dentro del flex container con la ayuda de la propiedad <code>flex</code>. Esta propiedad se utiliza en los flex items para indicar que tanto se debe "estirar" su ancho para ocupar cierta cantidad de espacio dentro del flex container. Por ejemplo, un flex item con un valor de 2 en la propiedad <code>flex</code> ocupará un ancho del doble que ocuparía un flex item con un valor de 1.
 
 ```html
 <body>
