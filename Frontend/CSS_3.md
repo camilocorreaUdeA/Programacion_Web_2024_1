@@ -4,9 +4,9 @@
 
 ### Flujo normal del documento HTML
 
-Por defecto y a menos de que hayas introducido manualmente algún cambio a la maquetación del documento HTML usando CSS los elementos de un sitio web se maquetan o posicionan utilizando el flujo normal o flujo por defecto del navegador. Este flujo normal asegura que el contenido de la página web sea <i>legible</i> para cualquier navegador web o dispositivo de navegación asistida, como un lector de pantalla.
+Por defecto, y a menos de que hayas introducido manualmente algún cambio a la maquetación del documento HTML usando CSS, los elementos de un sitio web se maquetan o posicionan utilizando el flujo normal o flujo por defecto del navegador. Este flujo normal asegura que el contenido de la página web sea <i>legible</i> para cualquier navegador web o dispositivo de navegación asistida, como un lector de pantalla.
 
-La pregunta ahora es ¿Cómo posiciona los elementos en pantalla el flujo normal? Y la respuesta está en un concepto que ya vimos con anterioridad que es el modelo de cajas. Es decir, los elementos individuales de un documento HTML se posicionan de tal forma que se tenga en estricta consideración las propiedades del modelo de cajas (padding, border, margin) inherentes al elemento HTML en cuestión.
+La incognita es: ¿Cómo posiciona los elementos en pantalla el flujo normal? Y la respuesta se encuentra en un concepto que ya vimos con anterioridad, el modelo de cajas. Es decir, los elementos individuales de un documento HTML se posicionan de tal forma que se tenga en estricta consideración las propiedades del modelo de cajas (padding, border, margin) inherentes al elemento HTML en cuestión.
 
 Ahora, primero que todo debemos hacer una distinción entre los elementos HTML separandolos en dos categorías a saber:
 
@@ -15,7 +15,7 @@ Ahora, primero que todo debemos hacer una distinción entre los elementos HTML s
   <li>Elementos de línea (<i>Inline-level elements</i>)</li>
 </ul>
 
-Los elementos de bloque se ubican en pantalla en una línea exclusiva ocupando por completo el ancho de asignado para el contenido del elemento padre (ejemplo: si el elemento padre es el <code>body</code>, entonces será todo el ancho de pantalla), y se apilan uno por debajo del otro de manera sucesiva y de acuerdo al orden de aparición en el documento HTML.
+Los elementos de bloque son aquellos cuyo modelo de cajas está diseñado de tal manera que ocupan todo el ancho de pantalla y se apilan uno por debajo del otro de manera consecutiva separados por la magnitud de la propiedad margin y de acuerdo con el orden de aparición en el documento HTML.
 
 ```html
 <body>
@@ -40,7 +40,7 @@ p{
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/66cd900c-2cf4-43e3-b97e-789bf5ae0433)
 
-En el ejemplo vemos 2 elementos de bloque: <code>h1</code> y <code>p</code>, podemos observar lo que se había comentado anteriormente, que ocupan todo el ancho del elemento contenedor (en este caso un elemento <code>body</code>), están apilados uno sobre otro de acuerdo con el orden de aparición en el documento HTML y su dimensión vertical se ajusta al tamaño del contenido (observe que el párrafo cuenta con una mayor dimensión vertical que el encabezado). Además se evidencia una separación entre los dos elementos (para esto es que hemos resaltado el border), lo cual se esperaba ya que por defecto los elemento de bloque tienen algún valor en la propiedad margin, usualmente en margin-top y margin-bottom.
+En el ejemplo vemos 2 elementos de bloque: <code>h1</code> y <code>p</code>, podemos observar lo que se había comentado anteriormente, que ocupan todo el ancho de la pantalla, están apilados uno sobre otro de acuerdo con el orden de aparición en el documento HTML y su dimensión vertical se ajusta al tamaño del contenido (observe que el párrafo cuenta con una mayor dimensión vertical que el encabezado). Además se evidencia la separación entre los dos elementos (para esto es que hemos resaltado el border), lo cual se esperaba ya que por defecto los elementos de bloque tienen algún valor correspondiente a la magnitud de la propiedad margin (usualmente en margin-top y margin-bottom).
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/647c2f8e-9ed9-4456-9f5d-fe0c3d7a27f6)
 <p>Se puede observar en la imagen que el margin por defecto asignado al elemento <code>h1</code> es de 46.9px y solo en las direcciones arriba y abajo.</p>
@@ -50,7 +50,7 @@ En el ejemplo vemos 2 elementos de bloque: <code>h1</code> y <code>p</code>, pod
 
 Otro detalle interesante que se destaca es como el margin del elemento <code>h1</code> llega hasta el límite del borde del elemento <code>p</code>, es decir la separación real entre ambos elementos son 46.9px y no una suma de los margin de los dos elementos como se podría llegar a pensar. A ese comportamiento en la separación de dos elementos de bloque contiguos se le conoce como <i>margin collapse</i> o colapso de márgenes, y es simplemente que el margin con mayor dimensión absorbe al de menor dimensión para convertirse en la separación efectiva entre los dos elementos de bloque.
 
-En cuanto a los elementos de línea, estos no son apilados uno tras otro en una nueva línea de la pantalla para cada uno, y en cambio son ubicados uno tras otro de manera consecutiva de acuerdo con el orden de aparición dentro del documento HTML en la misma línea hasta que agotan todo el ancho del elemento contenedor y eventualmente pasan a ocupar la línea siguiente una vez sobrepasan dicho ancho. Por defecto las dimensiones de un elemento de línea coinciden con las dimensiones del contenido del mismo, aún así es posible modificarlas a través de CSS (siempre y cuando hacer eso tenga sentido).
+Y en cuanto a la otra categoría, los elementos de línea, estos no son apilados uno debajo de otro en una nueva línea de la pantalla para cada uno, y en cambio son ubicados uno tras otro de manera consecutiva de acuerdo con el orden de aparición dentro del documento HTML en la misma línea hasta que agotan todo el ancho de la pantalla o del elemento contenedor y eventualmente pasan a ocupar la línea siguiente una vez sobrepasan dicho ancho. Por defecto las dimensiones de un elemento de línea coinciden con las dimensiones del contenido del mismo, aún así es posible modificarlas a través de CSS (siempre y cuando hacer eso tenga sentido).
 
 ```html
 <body>
@@ -91,7 +91,7 @@ En las siguientes imagenes se puede observar que no tienen margenes asignadas po
 
 En este [enlace](https://www.w3schools.com/html/html_blocks.asp) puede ver listas separadas de los elementos de bloque y de línea de HTML.
 
-### Contenedores <code>div</code> y <code>span</code>
+### Contenedores HTML genéricos: <code>div</code> y <code>span</code>
 
 <code>div</code>
 
@@ -146,9 +146,9 @@ div{
 
 ### Propiedad <code>display</code>
 
-La propiedad <code>display</code> sirve para determinar si un elemento es de bloque o de línea. Modificando esta propiedad se puede lograr que un elemento que por naturaleza es de bloque se convierta en un elemento de línea y vicerversa, y además nos va a ser también de utilidad para construir elementos de cuadrícula (<i>grid</i>) y elementos de caja flexible (<i>flex</i>).
+La propiedad <code>display</code> sirve para determinar la forma en que se muestra un elemento HTML. Modificando esta propiedad se puede, por ejemplo, lograr que un elemento que por naturaleza es de bloque se convierta en un elemento de línea y vicerversa. Y además, va a ser también de utilidad para distribuir elementos con los modelos de maquetación de cuadrícula (<i>grid</i>) y de elementos de caja flexible (<i>flexbox</i>).
 
-Esta propiedad también puede tener el valor <i>inline-block</i> que permite que los elementos se comporten como elementos de línea a los que se les puede asignar dimensiones de ancho y alto (<i>width</i> y <i>height</i>). Recuerde que los elementos de línea ignoran esas propiedades porque ajustan sus dimensiones a las del contenido.
+Esta propiedad también puede tener el valor <i>inline-block</i> que permite que los elementos HTML se comporten como elementos de línea a los que se les puede asignar dimensiones propias de los elementos de bloque como ancho y alto (<i>width</i> y <i>height</i>). Recuerde que los elementos de línea ignoran esas propiedades porque ajustan sus dimensiones a las su contenido.
 
 Posibles valores para la propiedad <code>display</code>:
 <ul>
@@ -160,12 +160,12 @@ Posibles valores para la propiedad <code>display</code>:
   <li><code>flex</code>: Elementos de bloque que permiten maquetar los elementos en su contenido de acuerdo al modelo flexbox de CSS</li>
 </ul>
 
-### Maquetación con CSS Grid
+### Maquetación con cuadrícula: Modelo CSS Grid
 
-CSS grid es un sistema de maquetación en dos dimensiones que permite organizar el contenido de un elemento contenedor en una cuadrícula formada por filas y columnas. Este sistema facilita la creación de diseños complejos ya que es posible realizar anidamientos de contenedores grid al interior de otros contenedores grid.
+CSS grid es un modelo de maquetación en dos dimensiones que permite organizar el contenido de un elemento contenedor en una cuadrícula formada por filas y columnas. Este modelo facilita la creación de diseños complejos ya que es posible realizar anidamientos de contenedores grid al interior de otros.
 
 <ul>
-  <li>Para definir un elemento <code>grid</code> se debe utilizar la propiedad <code>display</code> con el valor <code>grid</code>.</li>
+  <li>Para definir un elemento como un contenedor <code>grid</code> se debe utilizar la propiedad <code>display</code> con el valor <code>grid</code>.</li>
   <li>Para especificar el número de columnas y el ancho de las mismas se utiliza la propiedad <code>grid-template-columns</code></li>
   <li>Para especificar el número de filas de la cuadrícula y la altura de las mismas se utiliza la propiedad <code>grid-template-rows</code></li>
   <li>Para determinar el espacio entre filas se utiliza la propiedad <code>grid-row-gap</code>. Para las columnas la propiedad <code>grid-column-gap</code>, o bien el mismo valor para ambos con la propiedad <code>grid-gap</code></li>
@@ -207,11 +207,11 @@ Por ejemplo una cuadrícula de 6x6 (de 200px por 200px cada celda) con espacio e
  font-weight:bold;
 }
 ```
-Hay ocasiones en las que se prefiere indicar las dimensiones de las cuadrículas en fracciones del espacio disponible dentro del elemento contenedor, es en esos casos que es de utilidad la unidad <i>fr</i>, ya que permite expresar la dimensión de un elemento como tantas partes de fracción del espacio disponible en el contenedor.
+Hay ocasiones en las que se prefiere indicar las dimensiones de las cuadrículas en fracciones del espacio disponible dentro del elemento contenedor, es en esos casos que es de utilidad la unidad <i>fr</i>, ya que permite expresar la dimensión de un elemento como tantas partes o fracciones del espacio disponible en el contenedor.
 
-Entonces el navegador calcula cuántas unidades <i>fr</i> y distibuye el espacio disponible en esa suma de unidades. Y luego a cada columna o fila se le asigna tantas unidades como estén expresadas en las propiedades <code>grid-template-columns</code> y <code>grid-template-rows</code> respectivamente.
+Entonces el navegador calcula en cuántas unidades <i>fr</i> debe dividir el espacio disponible en el contenedor. Y luego a cada columna o fila se le asigna tantas unidades como estén expresadas en las propiedades <code>grid-template-columns</code> y <code>grid-template-rows</code> respectivamente.
 
-En el ejemplo siguiente, los pixeles restantes luego de separar los 200px para la primera columna se reparten en un total de 3 unidades <i>fr</i>, correspondiendole 1 unidad a la segunda columna y 2 a la tercera.
+En el ejemplo siguiente, el espacio restante luego de separar los 200px para la primera columna se reparten en un total de 3 unidades <i>fr</i>, correspondiendole 1 fración de las 3 a la segunda columna y 2 fracciones a la tercera.
 
 ```html
 <body>
@@ -241,7 +241,7 @@ En el ejemplo siguiente, los pixeles restantes luego de separar los 200px para l
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/f6bc01c4-14c2-4020-b76a-2eecbe8c13b8)
 
-Para definir diseños más dinámicos y complejos las propiedades <code>grid-column</code> y <code>grid-row</code> permiten  definir sobre cuáles columnas o filas se debe desplegar un elemento, de esta forma se puede tener elementos que ocupan varias columnas y filas al mismo tiempo. De esa forma es posible romper con la cuadrícula tradicional perimitiendo diseños más dinámicos donde hay cuadrículas que cuentan con dimensiones mayores en comparación las otras.
+Para definir diseños más dinámicos y complejos las propiedades <code>grid-column</code> y <code>grid-row</code> permiten  definir sobre cuáles columnas o filas se debe desplegar un elemento, de esta forma se puede tener elementos que ocupan varias columnas y filas al mismo tiempo. De esa forma es posible romper con la cuadrícula tradicional perimitiendo diseños más dinámicos donde hay celdas de la cuadrícula que cuentan con dimensiones mayores en comparación con las otras.
 
 ```html
 <body>
@@ -314,9 +314,9 @@ footer{
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/f38263a9-f0ee-4d67-bf64-de59ede61451)
 
-Otra manera de posicionar los elementos con <b><i>grid</i></b> es utilizando la propiedad <code>grid-template-areas</code>. El mecanismo con está propiedad es el de dar nombres a las partes en las que se divide el documento HTMLy a cada una de esas partes asignar los elementos que va a contener. Entonces a <code>grid-template-areas</code> se le asigna como valor un esquema de las distintas áreas que van a componer la página web, se usan los nombres asignados a las áreas en cada columna o fila que vaya a componer dicha área. Es importante mencionar que solo son posibles áreas cuadradas o rectangulares.
+Otra manera de posicionar los elementos con <b><i>grid</i></b> es utilizando la propiedad <code>grid-template-areas</code>. El objetivo con está propiedad es dar nombres a las partes en las que se divide el documento HTML y a cada una de esas partes asignar los elementos que va a contener. Entonces a <code>grid-template-areas</code> se le asigna como valor un esquema de las distintas áreas que van a componer la página web, se usan los nombres asignados a las áreas en cada columna o fila que vaya a componer dicha área. Es importante mencionar que solo son posibles áreas cuadradas o rectangulares.
 
-Luego en cada elemento, con la propiedad <code>grid-area</code> se indica el área donde se debe posicionar ese elemento. Esto funciona similar a como se vio anteriormente con las propiedades <code>grid-column</code> y <code>grid-row</code>.
+Luego, en cada elemento, con la propiedad <code>grid-area</code> se indica el área donde se debe posicionar ese elemento. Esto funciona similar a como se vio anteriormente con las propiedades <code>grid-column</code> y <code>grid-row</code>.
 
 ```html
 <body>
@@ -389,15 +389,15 @@ footer{
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/f3d067cd-c27d-4930-ac1a-ac2698a0b496)
 
-### Maquetación con CSS Flexbox
+### Maquetación con cajas flexibles: Modelo CSS flexbox
 
-Flexbox es un mecanismo para posicionar elementos de un documento HTML en filas y columnas. Flexox utiliza dos tipos de "cajas": <i>flex containers</i> y <i>flex items</i>. Los flex containers sirven para agrupar varios flex items y definir la forma de posicionarlos. Con CSS se especifica de forma explicita cuando un elemento HTML es un flex container pero en el caso de un flex item este solo será tal si está contenido en un flex container, de forma que la única tarea de los flex items es indicar al flex container cuántos elementos este debe tener en cuenta para posicionar o maquetar.
+Flexbox es un modelo para posicionar elementos de un documento HTML en filas y columnas de forma similar al modelo grid. Flexbox utiliza dos tipos de "cajas": <i>flex containers</i> y <i>flex items</i>. Los flex containers sirven como contenedores que permiten agrupar varios flex items y definir la forma de posicionarlos. Con CSS se especifica de forma explicita cuando un elemento HTML es un flex container pero en el caso de un flex item este solo será tal si está contenido dentro de en un flex container, de forma que la única tarea de los flex items es indicar al flex container cuántos elementos este debe tener en cuenta para posicionar o distribuir.
 
-Un elemento HTML puede ser un flex container y un flex item al mismo tiempo, siempre y cuando esté contenido dentro de otro flex container y al tiempo ser un flex container para otros elementos (sus propios flex items en ese caso).
+Un elemento HTML puede ser un flex container y un flex item al mismo tiempo. Esto ocurre cuando el flex container está contenido dentro de otro flex container (es un flex item entonces) y al tiempo es un flex container para otros elementos (sus propios flex items en ese caso).
 
-Para definir un elemento como flex container simplemente se utiliza la propiedad <code>display</code> dandole el valor <code>flex</code>, luego se debe definir la distribución de los flex items dentro del flex container. Vale la pena observar que con el modelo flexbox la posición de los elementos se determina en el elemento contenedor y no en los elementos a ser contenidos, que es como se haría por lo general en otros modelos de maquetación.
+Para definir un elemento como flex container simplemente se utiliza la propiedad <code>display</code> asignandole el valor <code>flex</code>, luego en los mismo flex items se define la distribución de estos dentro del flex container. Vale la pena observar que en el modelo flexbox la forma en que se distribuyen los elementos (flex items) se determina en el elemento contenedor (flex container) y no en los elementos a ser contenidos, que es como se haría en otros modelos de maquetación.
 
-Para distribuir los flex items dentro del flex container se puede utilizar la propiedad <code>justify-content</code> que puede tener los siguientes valores (hay más) para determinar la distribución de los elementos:
+Para determinar la distribución los flex items dentro del flex container se puede utilizar la propiedad <code>justify-content</code> que puede tener los siguientes valores (existen otros más):
 <ul>
   <li>center</li>
   <li>flex-start</li>
@@ -465,9 +465,9 @@ Pro ejemplo si quisieramos distribuir los flex items en todo el ancho del flex c
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/d9c71816-35a5-456a-b9fa-7d51475bbc39)
 
-Anteriormente habíamos comentado que un elemento puede tener los roles de flex container y flex item al mismo tiempo, esta característica es de bastante utilidad ya que un flex container solo puede detallar la distribución de sus descendientes directos, por tanto la distribución de los felx items no se hereda y no aplica a descendientes de mayor nivel de anidamiento. De ese modo los flex items que tengan descendientes deben a su vez ser flex containers para que sea posible posicionar esos descendientes utlizando el modelo flexbox.
+Anteriormente habíamos comentado que un elemento puede tener los roles de flex container y flex item al mismo tiempo, esta característica es de bastante utilidad ya que un flex container solo puede detallar la distribución de sus descendientes directos, por tanto la distribución de los flex items no se hereda y no aplica a descendientes en los siguientes niveles de anidamiento. De ese modo los flex items que tengan descendientes deben a su vez ser flex containers para que sea posible posicionar esos descendientes utlizando el modelo flexbox.
 
-Sigamos con el ejemplo que venimos trabajando, pero en esta ocasión agrupemos dos de los flex items en un nuevo contenedor que servirá como flex container para ellos y como flex item para el flex container original.
+Sigamos con el ejemplo que venimos trabajando, pero en esta ocasión agrupemos dos de los flex items en un nuevo contenedor que servirá como flex container para ellos y como flex item para el flex container inicial.
 
 ```html
 <body>
@@ -502,7 +502,7 @@ Sigamos con el ejemplo que venimos trabajando, pero en esta ocasión agrupemos d
 ```
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/d595f911-e479-4045-86da-bde6e3c09012)
 
-De momento hemos visto que con la propiedad <code>justify-content</code> podemos controlar la distribución de los flex items a lo ancho del flex container, esto es generalmente útil cuando la altura (height) del flex container no es significativamente diferente a la de los flex items, tal como vimos en los ejemplos anteriores. Pero en los casos donde el flex container tiene una altura definida y que es comparable a la de los flex items va a ser necesario una propiedad que nos permita alinear también de manera vertical los flex items en el espacio del flex container. Esto último lo podemos lograr con la propiedad <code>align-items</code> que nos va a permitir mover los flex items desde arriba hasta abajo del flex container (y también estirarlos) según nuestra necesidad.
+De momento hemos visto que con la propiedad <code>justify-content</code> podemos controlar la distribución de los flex items a lo ancho del flex container, esto es especialmente útil cuando la altura (height) del flex container no es significativamente diferente a la de los flex items, tal como vimos en los ejemplos anteriores. Pero en los casos donde el flex container tiene una altura definida y que es comparable a la de los flex items va a ser necesario una propiedad que nos permita alinear también de manera vertical los flex items en el espacio del flex container. Esto último lo podemos lograr con la propiedad <code>align-items</code> que nos va a permitir mover los flex items desde arriba hasta abajo del flex container (y también estirarlos) según nuestra necesidad.
 
 Los posibles valores para dicha propiedad son los siguientes:
 <ul>
