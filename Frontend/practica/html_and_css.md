@@ -12,7 +12,7 @@ En esta ocasión vamos a aprovechar lo que hemos aprendido de las hojas de estil
 3. La idea es que puedas mejorar considerablemente el aspecto de esa primera versión del sitio mediante el uso de estilos de CSS.
 4. Además que también puedas agregar algunas nuevas características al sitio que solo con HTML no sería posible implementar.
 
-### Requisitios:
+### Requisitos:
 
 <ul>
   <li>Todas las secciones del sitio web deben poder diferenciarse visualmente, de forma que se pueda observar una clara separación y demarcación entre las secciones que conforman las paginas del sitio web (encabezados, artículos, secciones, barras de navegación (principal y auxiliares), pies de página, etc.)</li>
