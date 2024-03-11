@@ -20,7 +20,7 @@ En esta ocasión vamos a aprovechar lo que hemos aprendido de las hojas de estil
   <li>Las barras de navegación (principal y auxiliares) deben responder con algún efecto al pasar el puntero del mouse sobre los enlaces. La barra principal debe estar orientada de forma horizontal mientras que las barras auxiliares de forma vertical.</li>
   <li>La barra de navegación principal debe "fusionarse" con el cabezote (imagen del encabezado) de cada página, es decir que los enlaces se observen super-puestos sobre el cabezote y estilizados de tal manera que no se vea afectada su visualización por el contraste con la imagen en el fondo.</li>
   <li>Recuerde que la barra de navegación principal debe estar presente en todas las páginas que conforman el sitio web de la agencia (ya hay entregas de la práctica pasada en las que no se cumple con este requisito!!!)</li>
-  <li>Cada página de los destinos turísticos debe contar con una barra de navegación lateral (aside) que permita navegar entre las distintas secciones de la página (atractivos, itinerario, costos, galería de imágenes, multimedia y enlaces externos, etc.)</li>
+  <li>Cada página de los destinos turísticos debe contar con una barra de navegación lateral (aside) ubicada en el borde izquierdo de la pantalla (orientada de forma vertical) que permita navegar entre las distintas secciones de la página del destino (atractivos, itinerario, costos, galería de imágenes, multimedia y enlaces externos, etc.)</li>
   <li>El cabezote principal, y las barras de navegación (principal y auxiliares) deben permanecer fijos en la página y no desaparecer conforme se navega el contenido (al hacer scroll), deben estar presentes y accesibles en todo momento.</li>
   <li>La sección de atractivos turísticos se debe reformar para que ya no sea una lista con los nombres de los lugares sino que sea una galería fotográfica maquetada en forma de cuadrícula irregular (donde las celdas tienen distintas dimensiones y el diseño no es estrictamente una cuadrícula). Además se debe implementar un efecto al pasar el puntero sobre las imágenes, de forma que se observe una sombra sobre la imagen y se pueda leer en un texto de color blanco el nombre del lugar y una corta descripción. Imagen de referencia:<br> 
 
@@ -32,5 +32,9 @@ En esta ocasión vamos a aprovechar lo que hemos aprendido de las hojas de estil
 <img src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/9ff1d156-b6e6-4d03-9295-b118768e6f86" />
 </li>
 <li>Los videos y cualquier otro contenido multimedia (mapas, widgets, etc.) deben estar centrados en la página.</li>
+<li>Desplegar el sitio web usando Github pages (tal cual como se hizo en la práctica anterior)</li>
+<li>A mayor detalle y calidad mejor ponderación en la evaluavión de la entrega ;-)</li>
 </ul>
+
+## Entrega: Responder al correo (y por favor solo a ese correo :-D) de entrega (que se va a enviar en el transcurso de la semana). Donde debe incluir los enlaces al sitio web desplegado en Github pages y al repositorio.
 
