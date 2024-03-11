@@ -31,6 +31,6 @@ En esta ocasión vamos a aprovechar lo que hemos aprendido de las hojas de estil
 
 <img src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/9ff1d156-b6e6-4d03-9295-b118768e6f86" />
 </li>
-<li>Los videos o cualquier otro contenido multimedia (mapas, widgets, etc.) deben estar centrados en la página.</li>
+<li>Los videos y cualquier otro contenido multimedia (mapas, widgets, etc.) deben estar centrados en la página.</li>
 </ul>
 
