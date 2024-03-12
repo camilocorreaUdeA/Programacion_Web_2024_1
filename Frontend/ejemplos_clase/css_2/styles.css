@@ -1,0 +1,37 @@
+  .main-nav {
+    display: flex;
+    background: orangered;
+    color: white;
+    border-radius: 3px;
+    padding: 1em;
+    font-family: sans-serif;
+  }
+  .main-nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 3;
+  }
+  .main-nav li {
+    margin-right: 1em;
+  }
+  .main-nav > form {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  .main-nav input {
+    flex: 1;
+  }
+  .main-nav button {
+    background: white;
+    border: 0;
+    border-radius: 1em;
+    color: orangered;
+    padding: 0 1em;
+    margin-left: .3em;
+  }
+  li:hover, button:hover{
+    cursor: pointer;
+  }
