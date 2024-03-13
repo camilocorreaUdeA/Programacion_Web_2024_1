@@ -149,6 +149,13 @@ Las operaciones CRUD en una API REST se implementan sobre la base de las peticio
 
 <img src="https://media.licdn.com/dms/image/D4E22AQH2GaLEmyKkBQ/feedshare-shrink_800/0/1706857499853?e=1713398400&v=beta&t=OYdYI7Wm8cD2WPaA1xN7zR945ve-TNZEAMR3SYOwgtM" />
 
+Códigos de status
+
+<img width="579" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/6188fa92-700b-45a6-9f7e-c5465afa3975">
+
+<img width="1427" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/a1a9c0c4-de10-4fbf-b590-b03606dae503">
+
+
 Las peticiones y respuestas del protocolo HTTP comparten una estructura similar compuesta por las siguientes partes:
 
 <ol>
@@ -201,6 +208,8 @@ Solo utilizan esta parte de la petición los métodos POST, PUT y PATCH. Existen
 </li>
 </ol>
 
+<img width="1298" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/de4c0ff3-692c-4894-bacb-ceed25d6c6ec">
+
 Respuestas HTTP (Responses)
 
 <ol>
@@ -230,7 +239,7 @@ Cuerpo de un único recurso: siendo este un archivo de longitud desconocida y co
 </li>
 </ol>
 
-![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/cec82073-8297-48c1-aebf-5be0905784d1)
+<img width="1180" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/79138771-5ee0-4649-8a53-75b0b50c43aa">
 
 Operaciones CRUD
 
