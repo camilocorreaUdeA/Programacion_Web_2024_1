@@ -46,6 +46,12 @@ Clasificación de las APIs remotas de acuerdo con su arquitectura:
   <li><b>API RPC:</b> La arquitectura RPC propone un enfoque en el cual cargas de trabajo remotas se ejecutan como si fuera de manera local, esta característca hace que RPC sea muy útil en la construcción de servicios distribuidos ya que una aplicación se puede componer de rutinas o funciones que internamente hacen llamados a funciones que se ejecutan en otros servicios externos. Esto también significa una gran felxibilidad en comparación con arquitecturas como REST poque se puede ejecutar practicamente cualquier función y solicitar cualquier tipo de acción sobre los datos, mientras que REST está restringido a los métodos ofrecidos por el protocolo HTTP.</li>
 </ul>
 
+<img src="https://media.licdn.com/dms/image/D4E22AQFjUzElbfH21Q/feedshare-shrink_800/0/1707803947477?e=1713398400&v=beta&t=2c6a-G-D1BqPA5jOiQdgcGsLql03KYKpwwMosGY25b8" />
+
+<img src="https://media.licdn.com/dms/image/D4E22AQHWOiPysZpJJw/feedshare-shrink_800/0/1709275777550?e=1713398400&v=beta&t=KswF_eo7xT9tWh6vK9xovkGltIYR6RBXHiCu3mZzCIc" />
+
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Gs-DIpNx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/io14pagxwlknvggc3tko.png" />
+
 Para los fines y objetivos de este curso nos interesa enfocarnos solo en las APIs REST así que desde este punto y en adelante cada vez que usemos el término API nos estaremos refiriendo específicamente a REST API.
 
 ### REST APIs
@@ -115,9 +121,13 @@ Aspectos a tomar en cuenta acerca de la estructura de JSON:
 
 En las APIs REST un endpoint se identifica mediante una URL que determina la localización de un recurso alojado en el servidor. Cada URL identifica un endpoint y cada endpoint representa una operación que se pueda ejecutar sobre el recurso señalado por la URL. Es decir, para cada método HTTP u operación autorizada sobre un recurso se destina un endpoint (no necesariamente una URL) individual. Por tanto, dos endpoints pueden tener la misma URL pero depediendo del método HTTP utilizado en la solicitud se ejecuta una función u otra en el servidor.
 
+<img src="https://media.licdn.com/dms/image/D4E22AQGaTSJ8F3WVfg/feedshare-shrink_800/0/1707288563310?e=1713398400&v=beta&t=mn-sBYIv99KhttVGU2qXWqx2-CzIDlgMg_WTvu0Q9XM" />
+
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/db3b1766-fd16-4793-b57c-d1a2b43a8ef5)
 
 Endpoint: <code>resources/videos</code>
+
+<img src="https://media.licdn.com/dms/image/D4E22AQFnl6QieJ45tg/feedshare-shrink_800/0/1700637931518?e=1713398400&v=beta&t=0DBVIqoEP8kqK8ohsNVnHbKgPTUp1dQSJ7a8sBTHeqI" />
 
 ### CRUD: Create, Read, Update and Delete
 
@@ -136,6 +146,8 @@ A partir de este momento vamos a relacionar el término aplicación web con una 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/edda1967-641b-4e97-a34d-303fba9e10c2)
 
 Las operaciones CRUD en una API REST se implementan sobre la base de las peticiones y respuestas de los métodos HTTP, por tanto vamos a hacer un pequeño recuento de la anatomía de las peticiones y respuestas en el protocolo HTTP.
+
+<img src="https://media.licdn.com/dms/image/D4E22AQH2GaLEmyKkBQ/feedshare-shrink_800/0/1706857499853?e=1713398400&v=beta&t=OYdYI7Wm8cD2WPaA1xN7zR945ve-TNZEAMR3SYOwgtM" />
 
 Las peticiones y respuestas del protocolo HTTP comparten una estructura similar compuesta por las siguientes partes:
 
@@ -248,3 +260,6 @@ Lista de recursos:
 
 ![image](https://github.com/camilocorreaUdeA/Programacion_Web_2023_2/assets/42076547/ab034419-0289-418d-abf4-46c566743493)
 
+## Diseño de APIs
+
+<img src="https://media.licdn.com/dms/image/D4E22AQGDcbxU2fjhUw/feedshare-shrink_800/0/1704956735034?e=1713398400&v=beta&t=fbjWcSg9mSSkaLu-cIL_9iK5SmLPrXAToL1z5sIz36M" />
