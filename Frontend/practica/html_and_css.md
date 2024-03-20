@@ -30,8 +30,8 @@ En esta ocasión vamos a aprovechar lo que hemos aprendido de las hojas de estil
 <img src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/f66959ef-ebff-4c15-8030-cd43d227a00b" />
 <img src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/7654dbc5-e994-4bf5-a69f-c7533f1c38c4" />
 </li>
-<li>En la sección de itinerario se debe observar la lista de los días cada uno seguido de la actividad general correspondiente a ese día, pero al dar clic debe desplegar la descripción detallata de las actividades del día, que debe permanecer oculta antes de dar clic (y oculatarse de nuevo una vez se da clic en otro día).</li>
-<li>En las secciones cuya descripción sea uin texto extenso (por ejemplo la sección de costos del viaje) se debe tener solo uno o dos renglones de muestra y proporcionar un enlace "Leer más" que despliegue el resto del texto. Imagen de referencia:<br>
+<li>En la sección de itinerario se debe observar la lista de los días cada uno seguido de la actividad general correspondiente a ese día, pero al pasar el mouse por encima debe desplegar la descripción detallada de las actividades del día, que debe permanecer oculta antes pasar el mouse (y ocultarse de nuevo al pasar el mouse sobre otro día).</li>
+<li>En las secciones cuya descripción sea un texto extenso (por ejemplo la sección de costos del viaje) se debe tener solo uno o dos renglones de muestra y proporcionar un enlace "Leer más" que despliegue el resto del texto (en otra página). Imagen de referencia:<br>
 
 <img src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/9ff1d156-b6e6-4d03-9295-b118768e6f86" />
 </li>
