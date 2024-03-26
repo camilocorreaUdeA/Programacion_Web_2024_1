@@ -71,7 +71,7 @@ Algunas propiedades de los nodos del DOM:
 
 ¿Recuerdas los selectores que utilizabamos para aplicar las reglas de estilo CSS a un elemento en particular del documento? Pues, esos mismos selectores nos van a ser de utilidad para seleccionar un elemento y procesarlo con Javascript. Para ese propósito vamos a utilizar el método <code>querySelector</code> del nodo <i>document</i>
 
-[Ejemplo:](https://codepen.io/camilocorreaUdeA/pen/KKbrbge?editors=1111)
+[Ejemplo:](https://codepen.io/camilocorreaUdeA/pen/KKbrbge?editors=1011)
 ```html
 <html>
  <head></head>
@@ -90,7 +90,7 @@ const primerElementoLista = document.querySelector(".lista :first-child");
 console.log(primerElementoLista.textContent); /* Frijoles */
 ```
 Con el método <code>querySelectorAll</code> puedes seleccionar todos los elementos que compartan el mismo selector CSS:
-[Ejemplo:](https://codepen.io/camilocorreaUdeA/pen/oNJQJZj?editors=1111)
+[Ejemplo:](https://codepen.io/camilocorreaUdeA/pen/oNJQJZj?editors=1011)
 
 ```html
 <html>
@@ -111,7 +111,7 @@ const arepa = elementosLista[1];
 console.log(arepa.textContent); /* Arepa */
 ```
 Para seleccionar un elemento por el valor del atributo <i>id</i> se utiliza el método <code>getElementById</code>
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/RwEqEVo?editors=1111)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/RwEqEVo?editors=1011)
 
 ```html
 <html>
@@ -128,7 +128,7 @@ console.log(parrafo.textContent); /* Texto del parrafo */
 ```
 
 Para seleccionar elementos por el valor del atributo <i>class</i> se utiliza el método <code>getElementsByClassName</code>
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/JjwewJo?editors=1111)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/JjwewJo?editors=1011)
 
 ```html
 <html>
@@ -146,7 +146,7 @@ const parrafos = document.getElementsByClassName("par");
 console.log(parrafos[1].textContent); /* Texto del parrafo 2*/
 ```
 O bien se pueden seleccionar elementos por la etiqueta del elemento con el método <code>getElementsByTagName</code>
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/QWzJzMx?editors=1111)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/QWzJzMx?editors=1011)
 
 ```html
 <html>
@@ -164,7 +164,7 @@ const parrafos = document.getElementsByTagName("p");
 console.log(parrafos[1].textContent); /* Texto del parrafo 2*/
 ```
 Combinando los métodos selectores y las propiedades de los nodos del DOM podemos hacer modificaciones al contenido (y al estilo) de los elementos HTML del documento.
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/yLGQGPG?editors=1111)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/yLGQGPG?editors=1011)
 
 ```html
 <html>
@@ -179,7 +179,7 @@ Combinando los métodos selectores y las propiedades de los nodos del DOM podemo
 const newContent = '<p><a href="https://learnjavascript.online/">¡Aprende Javascript en línea!</a></p>';
 document.getElementsByTagName("div")[0].innerHTML = newContent;
 ```
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/bGOQOvM?editors=1111)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/bGOQOvM?editors=1011)
 
 ```html
 <html>
@@ -229,7 +229,7 @@ div.style.cssText = "background-color: lightblue; border: 2px solid black;";
 /* asignando el atributo style y su valor con el método setAttribute */
 div.setAttribute("style", "background-color: lightblue; border: 2px solid black;")
 ```
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/mdaQgwR?editors=1111)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/mdaQgwR?editors=1011)
 ```html
 <html>
  <head></head>
@@ -314,7 +314,7 @@ const tareas = [
     lista.appendChild(nuevaTarea);   
   }
 ```
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/mdaaPYa)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/mdaaPYa?editors=1010)
 
 ```html
 <html>
