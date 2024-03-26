@@ -4,7 +4,7 @@
 
 ### ¿Qué es el DOM?
 
-El <i>Document Object Model</i> o modelado del documento HTML como un objeto es un representación en forma de árbol de todos el contenido de un documento HTML. El árbol es un esquemático de las relaciones que existen entre los elementos HTML que componen el documento. Explicado de una manera más sencilla, el árbol es el gráfico de un conjunto de nodos conectados de forma jerárquica, es decir nodos padres conectados a sus nodos hijos, donde los nodos son los elementos HTML del documento y las conexiones indican relación de descendencia/ascendencia entre dos nodos interconectados. Luego, cada rama del árbol indica los niveles de anidamiento que existen en un elemento HTML determinado.
+El <i>Document Object Model</i> o modelado del documento HTML como un objeto es una representación en forma de árbol de todos los elementos que conforman el contenido de un documento HTML. El árbol es un esquemático de las relaciones que existen entre los elementos HTML que componen el documento. Explicado de una manera más sencilla, el árbol es el gráfico de un conjunto de nodos conectados de forma jerárquica, es decir nodos padres conectados a sus nodos hijos, donde los nodos son los elementos HTML del documento y las conexiones indican relación de descendencia/ascendencia entre dos nodos interconectados. Luego, cada rama del árbol indica los niveles de anidamiento que existen en un elemento HTML determinado.
 
 ```html
 <!DOCTYPE html>
