@@ -282,6 +282,7 @@ Para agregar (insertar) un nuevo elemento al documento puede seguir los siguient
 <li>Agregue el contenido al nuevo elemento. Puede utilizar la propiedad <code>innerHTML</code> o si el contenido va a ser solo texto puede usar el metodo <code>createTextNode pasandole como parámetro el texto del contenido.</code></li>
 <li>Agregue el nuevo elemento al documento. Los nuevos elementos se insertan o se agrean a un elmento existente, que será el nodo padre del nuevo elemento, para insertar el nuevo elemento al final  de los otros descendientes del nodo padre puede utilizar el método <code>appendChild</code> del elemento padre pasando en el parámetro el nuevo elemento descendiente. O si quiere ubicar el nuevo elemento en una ubicación predeterminada (tomando como punto de referencia otro descendiente existente) puede utilizar el método <code>insertBefore</code> del nodo padre indicando en los parámetros el nuevo elemento y el elemento antes de cuya posición quiere insertar el nuevo elmento.</li>
 </ol>
+
 [Ejemplo](https://codepen.io/camilocorreaUdeA/pen/ZEVVWXb?editors=1111)
 
 ```html
