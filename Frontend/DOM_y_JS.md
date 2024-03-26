@@ -164,7 +164,7 @@ const parrafos = document.getElementsByTagName("p");
 console.log(parrafos[1].textContent); /* Texto del parrafo 2*/
 ```
 Combinando los métodos selectores y las propiedades de los nodos del DOM podemos hacer modificaciones al contenido (y al estilo) de los elementos HTML del documento.
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/yLGQGPG?editors=1011)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/yLGQGPG?editors=1010)
 
 ```html
 <html>
@@ -179,7 +179,7 @@ Combinando los métodos selectores y las propiedades de los nodos del DOM podemo
 const newContent = '<p><a href="https://learnjavascript.online/">¡Aprende Javascript en línea!</a></p>';
 document.getElementsByTagName("div")[0].innerHTML = newContent;
 ```
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/bGOQOvM?editors=1011)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/bGOQOvM?editors=1010)
 
 ```html
 <html>
@@ -229,7 +229,7 @@ div.style.cssText = "background-color: lightblue; border: 2px solid black;";
 /* asignando el atributo style y su valor con el método setAttribute */
 div.setAttribute("style", "background-color: lightblue; border: 2px solid black;")
 ```
-[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/mdaQgwR?editors=1011)
+[Ejemplo](https://codepen.io/camilocorreaUdeA/pen/mdaQgwR?editors=1010)
 ```html
 <html>
  <head></head>
@@ -248,7 +248,7 @@ const p = document.querySelector("div p");
 p.style.color = "red";
 p.style.fontSize = "30px";
 ```
-Podemos lograr el mismo objetivo haciendo coincidir el selector del elemento con un selector predefinido en las reglas CSS. En este ejemplo en particular vamos utilizar la propiedad <i>classList</i> que permite agregar o modificar los valores del atributo <i>class</i> de un elmento, y si ese atributo no existe lo crea. Luego vamos a llamar al método <i>add</i> para agregar al atributo <i>class</i> el valor que determinará la coincidencia con el selector de las reglas CSS. Se puede lograr el mismo efecto con el método <code>setAttribute</code>, con este último podemos asignar un valor al atributo <i>id</i> y lograr la coincidencia con un selector por id. [Ejemplo](https://codepen.io/camilocorreaUdeA/pen/NWeEmMz?editors=1111) 
+Podemos lograr el mismo objetivo haciendo coincidir el selector del elemento con un selector predefinido en las reglas CSS. En este ejemplo en particular vamos utilizar la propiedad <i>classList</i> que permite agregar o modificar los valores del atributo <i>class</i> de un elmento, y si ese atributo no existe lo crea. Luego vamos a llamar al método <i>add</i> para agregar al atributo <i>class</i> el valor que determinará la coincidencia con el selector de las reglas CSS. Se puede lograr el mismo efecto con el método <code>setAttribute</code>, con este último podemos asignar un valor al atributo <i>id</i> y lograr la coincidencia con un selector por id. [Ejemplo](https://codepen.io/camilocorreaUdeA/pen/NWeEmMz?editors=1110) 
 ```html
 <html>
  <head></head>
