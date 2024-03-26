@@ -125,7 +125,9 @@ console.log(typeof num); // number
 
 ## Operadores en Javascript
 
-### Operador +
+### Operadores aritméticos
+
+El operador +
 
 Adición para operandos de tipo Number.
 Concatenación para operandos de tipo String.
@@ -164,6 +166,8 @@ counter++;
 console.log(typeof counter); // number
 ```
 
+### Operadores de comparación
+
 Los operadores de comparación: &lt;, &gt;, &lt;=, &gt;=, !=, ==. Si son aplicados a operandos de distintos tipos homogenizan los operandos a un mismo tipo.
 
 ```js
@@ -189,7 +193,7 @@ console.log(1 === "1"); // false
 console.log('Walk' !== 'Walk'); // false
 ```
 
-Opeadores de operaciones booleanas
+### Operadores relacionales (operaciones booleanas)
 
 <ul>
     <li><b>||: </b>Operación OR</li>
@@ -205,10 +209,126 @@ console.log(!!1); // true
 console.log(!!"0"); // true
 ```
 
+## Estructuras de control de flujo de programa
 
+### Condicionales
 
+if...else if...else
 
+```js
+if(condicion){
+   // bloque de sentencias primera condicion
+}
+else if(condicion alternativa){
+   // bloque de sentencias condicion alternativa
+}
+else{
+   // ejecucion cuando no se cumple ninguna condicion anterior
+}
+```
 
+Switch case
+
+```js
+switch(opcion){
+   case 'valor_1':
+      // bloque de sentencias primer caso
+      break
+   case 'valor_2':
+      // bloque de sentencias segundo caso
+      break
+   default:
+      // bloque de sentencias caso opcional por defecto
+      break
+}
+```
+
+Operador ternario
+
+```js
+let resultado = condicion ? opcion1 : opcion2;
+```
+
+### Ciclos de repetición
+
+Ciclo while
+
+```js
+while(condicion){
+   // bloque de sentencias a repetir en el ciclo
+   // mientras se cumpla la condicion
+}
+```
+
+Ciclo do...while
+
+```js
+do{
+   // bloque de sentencias a repetir en el ciclo
+   // mientras se cumple la condicion
+   // o al menos una vez así no se cumpla la condicion
+}while(condicion);
+```
+
+Ciclo for
+
+```js
+for(let i=0; i < N; i++){
+   // bloque de sentencias a repetir en el ciclo
+   // para i desde 0 hasta i menor que N
+}
+```
+
+Ciclo for...in
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CNYtBCoAgFAX3nuItAhOiC4QnCUGzXwjiB2sRiHcPIzezmDfPc7puuJzpjAyNVTo5QW4NvmFvIGkWcXAeI90IaacHIfWXKgKA53RxpDnyOdp%2FWYfyxdVAYyjdfs5Uq0R9AQ%3D%3D)
+
+```js
+const arreglo = ['a', 'b', 'c', 'd', 'e'];
+for(let index in arreglo){
+   console.log(`arreglo[${index}] = ${arreglo[index]}`)
+}
+```
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CHcxBCoMwEEbh%2FZziXwijID3AiCcpgiZOiyY4UN2EkLuXZPe9zYv6wNyJGZmATcAbjwQ4AbsmL2DftAt4b1IBK1OZiD7266M%2BCJpwXPU11BO8XbdFfUX79qu5893loKksmNHl2kHTUtaByh8%3D)
+
+```js
+let obj = {
+  a: 'a',
+  b: 'b',
+  c: 'c',
+  d: 'd',
+  e: 'e'
+};
+
+for(let key in obj){
+   console.log(`obj[${key}] = ${obj[key]}`)
+}
+```
+
+Ciclo for...of
+
+Funciona solo con iterables, por tanto no funciona con variables de tipo Object.
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CNcsxDoAgEETRnlNMt5AYL2A8ibFAHGhWNkE6490Nhc2r%2Fld2xNZY1LBikygT5BikwTmg7IvL1ryyg8qLtRss%2F2N4HIBk9TblrFb8HwX3fg%3D%3D)
+
+```js
+let arreglo = ['a', 'b', 'c', 'd', 'e'];
+for(let elemento of arreglo){
+   console.log(elemento)
+}
+```
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CJcsxCoAwDAXQvaf4OLWLFxA3LxJjqoXQSFpwEO8u4vx4Kh3ZqQlmDIs0cjdVwyagUwsTF6vScMk6TCGbR5UOPshh%2BZ%2FpDgDYajOVUW2PH6fwvA%3D%3D)
+
+```js
+let frase = "Desarrollo de aplicaciones web";
+for(let char of frase){
+   console.log(char)
+}
+```
+
+## Funciones
 
 
 
