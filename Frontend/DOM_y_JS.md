@@ -44,7 +44,7 @@ console.log(document.documentElement)
 ```
 Todos los nodos del árbol del DOM tienen un conjunto de propiedades y métodos (recuerda que estos nodos son modelados como objetos) que nos van a permitir manipular los elementos de la página web con la ayuda de Javascript.
 
-A continuación vamos a proporcionar un listado de las propiedades del DOM de uso más común, puede ver un listado más completo puede visitar este [enlace](https://linuxhint.com/html-dom-methods-and-properties/)
+A continuación vamos a proporcionar un listado de las propiedades del DOM de uso más común, para ver un listado más completo puede visitar este [enlace](https://linuxhint.com/html-dom-methods-and-properties/)
 
 Algunas propiedades de los nodos del DOM:
 <ul>
