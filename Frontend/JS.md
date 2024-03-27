@@ -434,10 +434,119 @@ let result = multiply(5,8);
 console.log(result);
 ```
 
+## Métodos básicos asociados a los tipos de datos
 
+### parseInt y parseFloat
 
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUcgrzVWwVShILCpO9cwr0VA3NSioUNe05spJLVFISU2Gybnl5CeWaKgbGekZ6Zmoa3JxJefnFefnpOrl5Kdr5JXmalqjiKSkJmtaAwA%3D)
 
+```js
+let num = parseInt('50px');
+let dec = parseFloat('22.2.4')
 
+console.log(num);
+console.log(dec);
+```
+
+### toString
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUcgrzVWwVTAyNbXmSs7PK87PSdXLyU%2FXyCvN1SvJDy4pysxL1zA009TEI22EV9bQQFPTGgA%3D)
+
+```js
+let num = 255;
+console.log(num.toString(16));
+console.log(num.toString(2));
+console.log(num.toString(10));
+```
+
+### length, charAt y operador []
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUSguKVKwVVBySS1OLCrKz8nJV0hJVXAsKChWCE9NUrLmSs7PK87PSdXLyU%2FXKC4pijaI1cQQ1EvOSCxyLNEw1cSUiwbJ56TmpZdkKOgqGMZqAgA%3D)
+
+```js
+let str = "Desarrollo de Apps Web";
+console.log(str[0]);
+console.log(str.charAt(5));
+console.log(str[str.length - 1]);
+```
+
+### uppercase y lowercase
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUSguKVKwVVAvd81x9s91VcjI93VV50rOzyvOz0nVy8lP1yguKdIryQ8tKEgtck4sTtXQ1LTGIu%2BTX46QBwA%3D)
+
+```js
+let str = 'wElCOmE hoME'
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+```
+
+### indexOf
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUSguKVKwVVBySS1OLCrKz8nJV0hJVXAsKChWCE9NUrLmSs7PK87PSdXLyU%2FXKC4p0svMS0mt8E%2FTUEfoUNfUxKMOZBZ%2BFeWpSSAFAA%3D%3D)
+
+```js
+let str = "Desarrollo de Apps Web";
+console.log(str.indexOf('Desarrollo'));
+console.log(str.indexOf('Apps'));
+console.log(str.indexOf('web'));
+```
+
+### includes
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUSguKVKwVVBySS1OLCrKz8nJV0hJVXAsKChWCE9NUrLmSs7PK87PSdXLyU%2FXKC4p0svMS84pTUkt1lAPT01S19TEp6IcogIA)
+
+```js
+let str = "Desarrollo de Apps Web";
+console.log(str.includes('Web'));
+console.log(str.includes('web'));
+```
+
+### startsWith y endsWith
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Chc7BCsIwEATQe79i6CXJxQ%2BwiAj6B0LP23bVwDYJuxHBr5ei9CR6nRmYJ1xByR6s2MG3RzZSzSIZE%2BNQiqHnoQ0bq6TV%2Blhv3i2xC9jDu5NBCIWEBiXEFMdI4gK2SzeXyE%2FCmBNy1XXmQteMOVkW3ki%2B%2Bvd96JpGuELZyp2t0m8Pp%2Bmj6Xn4irnEtFLOrHNM%2Fynreehe)
+
+```js
+let answer = ("Desarrollo de Apps Web").startsWith('Apps') ? ('Es la palabra inicial') : ('Empieza con otra palabra');
+console.log(answer);
+
+let respuesta = ("Desarrollo de Apps Web").endsWith('Web') ? ('Es la palabra final') : ('Termina con otra palabra');
+console.log(respuesta);
+```
+
+### substr, substring y slice
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUSguKVKwVVB3LMjJTE5MzszPSy1Wt%2BZKzs8rzs9J1cvJT9coLinSKy5NKi4p0jDRUTDT1MQlnZmXDlJhaIBfiaGBjoIJViU5mcmpcBMA)
+
+```js
+let str = 'Aplicaciones';
+console.log(str.substr(4, 6)); // 6 caracteres a partir de la posicion 4
+console.log(str.substring(4, 10)); // fragmento desde la posicion 4 a la 9
+console.log(str.substring(10, 4)); // fragmento desde la posicion 4 a la 9
+console.log(str.slice(4, 10)); // fragmento desde la posicion 4 a la 9
+```
+## Métodos para manipular arreglos
+
+### Operador [], indexOf y length
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CS87PKy5RSCwqSqxUsFWIVg9PTVLXUVBPLCjIyUxOLMnMzysG8VNSy1Jz8gtyU%2FNK1GOtuZLz84rzc1L1cvLTNcB6ow1jNbEI62XmpaRW%2BKdpgM3VxKokJzUvvSRD0xoA)
+
+```js
+const array = ['Web', 'applications', 'development'];
+console.log(array[1]);
+console.log(array.indexOf('Web'));
+console.log(array.length);
+```
+
+### arreglo a String
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CS87PKy5RSCwqSqxUsFWIVg9PTVLXUVBPLCjIyUxOLMnMzysG8VNSy1Jz8gtyU%2FNK1GOtuZLz84rzc1L1cvLTNYJLijLz0jXARmhqWgMA)
+
+```js
+const array = ['Web', 'applications', 'development'];
+console.log(String(array));
+```
+
+### push, pop, shift y unshift
 
 
 
