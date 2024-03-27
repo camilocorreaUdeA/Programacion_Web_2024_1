@@ -135,7 +135,7 @@ Operandos Number + String resulta en conversión del tipo Number a String y desp
 
 Orden de ejecucuión de operadores + es de izquierda a derecha.
 
-3+4+'5' = "75"
+<code>3+4+'5' = "75"</code>
 
 [Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUcgvULBVMNY20lY3NFC35krOzyvOz0nVy8lP18gv0EQVKKksSM1PUwCJAwA%3D)
 
