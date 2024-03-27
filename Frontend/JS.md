@@ -708,7 +708,121 @@ preciosFrutas.forEach((valor, clave) => {
 })
 ```
 
+Los <b>sets</b> son colecciones donde cada elemento es único y no se repite dentro de la colección.
+
+### Métodos principales asociados a los sets
+
+<ul>
+    <li><b>new Set(): </b>función que permite crear un <code>set</code>. Se le puede pasar como argumento de entrada un arreglo o cualquier otro iterable.</li>
+    <li><b>add(valor): </b>agrega un nuevo valor a la colección.</li>
+    <li><b>delete(value): </b>elimina un valor de la colección.</li>
+    <li><b>has(valor): </b>verifica si la colección tiene a valor.</li>
+    <li><b>clear(): </b>elimina todos los elementos de la colección.</li>
+    <li><b>size: </b>retorna la cantidad de elementos de la colección.</li>
+</ul>
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CfY29CgIxEIT7PMV0SUDuBcLZ6QtYqsV6bCKS24VcDlHx3cXgX2U3zHwzk7li4rouc6UJPYTP2HB1WzuSXEnILmCFCsmpyZEkaRNampFmutDhnbXG3gcTtbjMFfE5DI3fE38zADCoTJq5y5pcg3wwd%2FPr2p1YH8yn2EUtKxqO7sWjX%2BLPlg8P)
+
+```js
+let setFrutas = new Set(['manzana', 'naranja', 'mango', 'mora', 'guayaba', 'manzana']);
+for(let fruta of setFrutas){
+    console.log(fruta);
+}
+console.log('\n');
+setFrutas.forEach((fruta) => {
+    console.log(fruta);
+});
+```
+
 ## Clases y objetos en Javascript
+
+Definición de una clase
+
+```js
+class ClassName{
+   // variables estaticas de la clase
+   static variable = "valor"
+   // metodos de la clase
+   constructor(args...){
+   }
+   classMethod1(args...){
+   }
+   classMethod2(args...){
+   }
+   // ...
+}
+```
+Declaración de objetos de una clase
+
+```js
+let obj = new ClassName(argumentos_constructor...);
+obj.classMethod1(args...);
+```
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2ChVE9a8QwDN39K7TZgZDh1nBD6d6lY7lBdYUvxbEPy%2BaGI%2F%2B9KB%2BmTUnrwcZ6T3rvIeuRGV5z%2BaCQHwoAwMbAORWbYzIBR2oBHbVgY0lM3CwkOfk6cCcMOIM8%2FU8EnQDo9vV1EJy3kQs%2BzTdTfsGRZuF%2FpWrLkyOD7lfDzkGlPy%2B65iDSnwbdarB5QKJcUvjmrTLEz44gXiq%2BGdhxNuFJTUp5ysDLXiQ03bctGf0Zr0G3cDq18KZvKbqEI9ohSlHjzQ92%2FhHDnd6lZtHb4qO%2BNL2S9UZPnY%2FOrPO7GuoYnyMdwzVR038B)
+
+```js
+class Student{
+    constructor(name, age, courses){
+        this.name = name;
+        this.age = age;
+        this.courses = courses;
+    }
+    setName(name){
+        this.name = name;
+    }
+    setAge(age){
+        this.age = age;
+    }
+    setCourses(courses){
+        this.courses = courses;
+    }
+    getName(){ return this.name }
+    getAge(){ return this.age }
+    getCourses(){ return this.courses }
+}
+
+let student = new Student('john', 22, ['programacion', 'aplicaciones web', 'calculo']);
+console.log(student.getName());
+console.log(student.getAge());
+console.log(student.getCourses());
+```
+Herencia entre clases en Javascript
+
+Para heredar de otra clase se utiliza la palabra <code>extends</code>. Y para utilizar el <code>constructor</code> de la clase base se utiliza el método <code>super</code> con los argumentos de entrada correspondientes.
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CdZDNasMwDIDvfgphdnCg5AVML9t57BWqOqIrOPaQFdqu5N2HREYW2vlgg%2F78fUoZW4M3ZLg7AEi1NOEpSeVwZCxDZ2E98nluvcVgD%2FZGTc16nUheNRLWciaZuPzpWqpn51wmgYQMeyh00c%2BDH%2FF7QN9FpwQ1U5%2FrKSTkfh3dRedcMt73mxLTVagMRv8cfgcFR1qZ2vRFv15x41UvhYwHR9pofWjiUevwcl%2FNZpPREQMcb7CkbOR8eLDms9TF3DSCZyo4ZfE78CM92YF2bPfwT8EC28Uf)
+
+```js
+class Car {
+   constructor(brand){
+       this.brand = brand;
+   }
+   getBrand(){
+       return this.brand;
+   }
+}
+
+
+let car = new Car("mazda");
+console.log(car.getBrand());
+
+
+class MyCar extends Car{
+   constructor(brand, name){
+       super(brand);
+       this.owner = name;
+   }
+   getOwner(){
+       return `${this.brand} car owned by ${this.owner}`
+   }
+}
+
+
+let carrito = new MyCar("renault", "me");
+console.log(carrito.getBrand());
+console.log(carrito.getOwner());
+```
 
 ## Try, catch y throw. Manejo de excepciones es Javascript
 
