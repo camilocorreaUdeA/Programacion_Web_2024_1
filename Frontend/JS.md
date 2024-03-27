@@ -579,7 +579,7 @@ console.log(estadios);
 ```js
 let estadios = "atanasio, pascual, metropolitano, campin, palmaseca";
 const stds = estadios.split(', ');
-consts joinStd = stds.join("--");
+const joinStd = stds.join("--");
 console.log(stds);
 console.log(joinStd);
 ```
@@ -627,8 +627,92 @@ console.log(someDomesticated);
 
 ## Maps y Sets
 
+Los mapas son colecciones conformadas por elementos que son pares de clave y valor. Donde las claves son únicas y pueden ser de cualquier tipo.
+
+### Métodos principales asociados a los mapas
+
+<ul>
+    <li><b>new Map(): </b>función para crear un mapa.</li>
+    <li><b>set(clave, valor): </b>permite almacenar un nuevo par clave-valor en el mapa.</li>
+    <li><b>get(clave): </b>retorna el valor asociado a la clave. <code>undefined</code> si la clave no existe en el mapa.</li>
+    <li><b>has(clave): </b>verifica si la clave existe en el mapa.</li>
+    <li><b>delete(clave): </b>elimina un par clave-valor del mapa.</li>
+    <li><b>clear(): </b>elimina todos los elementos del mapa.</li>
+    <li><b>keys(): </b>retorna un arreglo con todas las claves del mapa.</li>
+    <li><b>values(): </b>retorna un arreglo con todos los valores del mapa.</li>
+    <li><b>size: </b>retorna la cantidad de elementos almacenados en el mapa.</li>
+</ul>
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CfY5NCoMwEIX3OcXskkAIycKVeAQPMdipFoZEmkihpy%2BJFrVIVwNv3s%2FHlGEJPc4IHQR6QY%2Bz0q1YNZsoK%2BmdNCCnuCSS55d3BprmrN2RExmoR7diiCFFJstxVF%2FX410%2BgilDbYVuY7DjtvcTrK4SuWibMK2beue4EVMm5d01QIl4d%2FAPTPhU%2F2g%2F)
+
+```js
+let unMapa = new Map();
+unMapa.set('10', 'house');
+unMapa.set(10, 55);
+unMapa.set(false, false);
+console.log(unMapa.size);
+
+let house = unMapa.get('10');
+console.log(house);
+
+console.log(unMapa.has(false));
+unMapa.delete(10);
+console.log(unMapa.has(10));
+unMapa.clear();
+console.log(unMapa.size);
+```
+
+### Ciclos iterativos sobre mapas
+
+<b>for...of</b>
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CbY5BCsIwEEX3OcXsmkApsSgixa07T1C6GMq0qGmmJKmi4t0lFi2lbh%2FvvxlDAXpH9Yn9wQ0BPezB0g2O2MtSAECZdGgfaDFJYbXVukpHatGhPUe62%2Fxgh7blKOaT2LGLVr7WuhIAlVCFEA07aShAE28CN%2FMfsgvdvVTqGQs1W8%2BGMsOt%2FOiqEK%2BpMA6XiSuagf5GRm9eIUMd2bDsLOdfNQbe)
+
+```js
+let preciosFrutas = new Map([
+   ['manzana', 1700],
+   ['naranja', 950],
+   ['mango', 1200],
+   ['mora', 2400]
+  ]
+);
+
+for(let fruta of preciosFrutas.keys()){
+   console.log(fruta);
+}
+
+for(let precio of preciosFrutas.values()){
+   console.log(precio);
+}
+
+for(let elemento of preciosFrutas){
+   console.log(elemento);
+}
+```
+
+<b>forEach</b>
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CVY3RCoIwGIXv9xT%2FheAGIkuKKLG7uusJRPBnLDPmftnUIPHdYwZFt9%2F5zjlGD9A7rVryFzcO6KEAq59wxZ6XDADKuEP7QotxApu9lFXyoRYd2kegh90XdmgbCmL2Eztywcq2UlYMoGIiZ%2BzvMr2RO6O6cz6hIZeAMjhpAcUJ5rChyHoyOjXU8Dqa13QBNWo%2F4BGieW0ttcjZIt4%3D)
+
+```js
+let preciosFrutas = new Map([
+   ['manzana', 1700],
+   ['naranja', 950],
+   ['mango', 1200],
+   ['mora', 2400]
+  ]
+);
+
+preciosFrutas.forEach((valor, clave) => {
+   console.log(`${clave} cuesta: ${valor}`);
+})
+```
+
 ## Clases y objetos en Javascript
 
 ## Try, catch y throw. Manejo de excepciones es Javascript
+
+## Ejecución asincrónica: async, await y promises
+
 
 
