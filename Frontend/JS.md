@@ -330,6 +330,116 @@ for(let char of frase){
 
 ## Funciones
 
+Para declarar funciones en Javascript se utiliza la palabra <code>function</code>, a continuación se indica el nombre de la función y entre paréntesis se define la lista de parámetros de entrada de la función. El bloque de código de la función se agrega entre llaves.
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CSyvNSy7JzM9TKCjKzCsJTs0rSc1LTtVILEqP0FFILEqP1KzmUlBQSM7PK87PSdXLyU8HyyloK6grlOQrqCtoQ1Rx1XJxoRqhHp6ak5yfm6quo6DulViWWJxclFlQoq5pDQA%3D)
+
+```js
+function printSentence(argX, argY){
+   console.log(argX + ' to ' + argY)
+}
+
+printSentence('Welcome', 'Javascript');
+```
+
+### Valores por defecto en argumentos de funciones
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CSyvNSy7JzM9TKCjKzCsJTs0rSc1LTtVILEqP0FFILEqPtFX3SixLLE4uyiwoUdes5lJQUEjOzyvOz0nVy8lPBytU0FZQVyjJV1BX0AZr0eSq5eJCNU89PDUnOT83VV3TGgA%3D)
+
+```js
+function printSentence(argX, argY='Javascript'){
+   console.log(argX + ' to ' + argY)
+}
+
+printSentence('Welcome');
+```
+
+### Retorno en funciones
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CSyvNSy7JzM9TyC3NKcksyKnUSNRRSNKs5lJQUChKLSktylNI1Eqy5qrl4spJLVEoSi0uzSlRsEUoN9VRMNa05krOzyvOz0nVy8lP14Ao0gQA)
+
+```js
+function multiply(a, b){
+   return a*b;
+}
+
+let result = multiply(5, 3);
+console.log(result);
+```
+
+### Funciones como expresiones o funciones anónimas. No olvidar el <code>;</code> al final de la declaración.
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUSgoyswr8UjNyclXsFVIK81LLsnMz9PIS8xN1azmUlBQSM7PK87PSdXLyU%2FXSICoU6kGSdcqKiomaHLVWnNxIczQUHJOLMrPycxLVNK0BgA%3D)
+
+```js
+let printHello = function(name){
+   console.log(`Hello ${name}!!!`)
+};
+
+printHello("Carolina");
+```
+
+### Callbacks
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CnZFBTsMwEEX3OcWQlS1FXCALFkgsWBQhJCSWk%2BmEWjUzqSfuBvVInKIXq5KmqYoqBHg1%2Bt%2F%2B%2Fn5us1AfVIAwxgZp%2FZCF3CazDWo1ym9sx2Gh%2FrMAAAitI5U2pI95q5%2BsYU2HnK9HaQccjS%2Fthc5usSuK9lQDxZ7WbsoiFdPIt1HfXfmcGZrAUkHPYCFtGZYMiTs0vSl9%2FT3mHoU4Xo16RQOETpecALvEMg6bvP%2Baci5glC%2FYBDRYIXGaORmwwCNu0SiFrr8rq2P36ny3r%2F%2BZNDQ%2BPcWduf4Nx4D2V0k%2F0xh%2FyNcH)
+
+```js
+function callbackFunc(question, callYes, callNo){
+    if(confirm(question)){
+        callYes();
+    } else{
+        callNo();
+    }
+}
+
+function ansOk(){
+    console.log("Que bien, te sirve de repaso!");
+}
+
+function ansCancel(){
+    console.log("Vas a poder aprender aquí");
+}
+
+callbackFunc("Sabias hacer callbacks en Javascript?", ansOk, ansCancel);
+
+callbackFunc("Sabias hacer callbacks en Javascript?",
+   function(){
+       console.log("Que bien, te sirve de repaso!");
+   },
+   function(){
+       console.log("Vas a poder aprender aquí");
+   }
+);
+```
+
+### Funciones flecha: Arrow functions
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2Cy0ktUcgtzSnJLMipVLBV0EjUUUjSVLC1U0jUSrLmykktUShKLS7NKVGwhSvTMNWx0LTmSs7PK87PSdXLyU%2FXgKjRtAYA)
+
+```js
+let multiply = (a, b) => a*b;
+let result = multiply(5,8);
+console.log(result);
+```
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CVYw7CoAwEAX7PcUrEwl2ghDiXaIsIqxG4qYQ8e6Cn8J2ZhhhxVxEp1V2BJjo0FuEDgcBgLAi81ZEERCr3t80s5a8vMKDTqJf%2BA1N41rraUjLloRrSaN5Gusv)
+
+```js
+let multiply = (a, b) => {
+    let result = a*b;
+    return result; 
+}
+
+let result = multiply(5,8);
+console.log(result);
+```
+
+
+
+
+
+
+
 
 
 
