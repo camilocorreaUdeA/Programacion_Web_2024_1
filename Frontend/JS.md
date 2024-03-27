@@ -548,9 +548,87 @@ console.log(String(array));
 
 ### push, pop, shift y unshift
 
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CXY1BCsMgEEX3nmJ2o1ByAck5uihdaDJtLBMVnST09sUkFNrd%2F%2B8%2F%2BEwCrhT3hh5ueCWPF0CXM4fBSUixtj7SSpzyTFHwbtXud3mpk8aXW10dSsjSxElmRmMVk0DL0MMpp6xPvpH%2F4jqFh7ThqEs8AG7k0aghxZqYOk5PvQvG%2FrD28Ic28sZ%2BAA%3D%3D)
 
+```js
+let array = ['Web', 'applications', 'development'];
+array.push('javascript', 'html');
+let html = array.pop();
+let web = array.shift();
+array.unshift('web')
+console.log(array);
+console.log(html);
+console.log(web);
+```
 
+### splice, join y split
 
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CXY3BCsIwEETv%2BYr1lAZqQa%2Bh3%2BAHiIcl3crCNhvcFATx38UGFbwNM29mhCqQVZxYDUY4e6yY0Vh9D76gpRXlLReqNy0qXDFvWcKlcG6ULGiU0F%2BiS5qtAueJ7jB%2Bl4fNOM3d306IjmfoGr4bYX8IDwfw61kRTtSAHo4huud2oUKD6LX7gCG%2BAA%3D%3D)
 
+```js
+let estadios = ['atanasio', 'pascual', 'metropolitano', 'campin', 'palmaseca'];
+const index = estadios.indexOf('metropolitano');
+if (index != -1){
+   estadios.splice(index, 2); // remueva dos elementos a partir del indice
+}
+console.log(estadios);
+```
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CXYxBCsMwDATvfYXwJQ44%2FkDIK%2FoCYYuiIlumUv9fXJJLjrs7O0IOZI6V1eCAgI4djTXBQCtflASN%2FKNDhR27JijYBve5S0OjgmF%2FFO3mYF6n49JlG8IelwTLeiFv5f70CscfzjPGsG3hBFQoi77iHG%2FV%2BVz3Hw%3D%3D)
+
+```js
+let estadios = "atanasio, pascual, metropolitano, campin, palmaseca";
+const stds = estadios.split(', ');
+consts joinStd = stds.join("--");
+console.log(stds);
+console.log(joinStd);
+```
+
+### find, filter, map y some
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CndCxasMwEAbgXU9xnRxDMKTtZKMMbQoZ8gahg7AvieAkBetMh9B3D5Kj1rWdUqpBcJL49N8RMiirjSIPEvYCAOAS97B0U8Jq%2BVVaZbCE7FVx9n3oWXHnS8gaZ9CzrhVjk8Xrz%2BWM9zjx3gjPJ2Vn0Q9Nv2FPE2yLrbP%2FkJ4n0ktH9Mc%2BxXslBCFD3aLirkWQaarFQdtm0Rcg17fjIvwBUvbDzCtRO%2BsdYUHuuEhIfkND8p0%2B%2FESJsZ2yfcgIx35HcpKSHFL4Hdojnwa4Uef5wAXFpyN0gCTXO4ObwZgGeLi6m%2FvhTu6xl1dX)
+
+```js
+let animals = [
+    {
+        id: 1,
+        name: 'Cat',
+        status: 'domesticated'
+    },
+    {
+        id: 2,
+        name: 'Elephant',
+        status: 'wild'
+    },
+    {
+        id: 3,
+        name: 'Heron',
+        status: 'wild'
+    },
+    {
+        id: 4,
+        name: 'Bull',
+        status: 'domesticated'
+    }
+];
+
+let creature = animals.find(animal => animal.name == 'Cat');
+console.log(creature);
+
+let wildLife = animals.filter(animal => animal.status == 'wild');
+console.log(wildLife);
+
+let namesLength = animals.map(animal => animal.name.length);
+console.log(namesLength);
+
+let someDomesticated = animals.some(animal => animal.status != 'wild');
+console.log(someDomesticated);
+```
+
+## Maps y Sets
+
+## Clases y objetos en Javascript
+
+## Try, catch y throw. Manejo de excepciones es Javascript
 
 
