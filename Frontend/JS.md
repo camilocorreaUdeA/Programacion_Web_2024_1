@@ -824,7 +824,7 @@ console.log(carrito.getBrand());
 console.log(carrito.getOwner());
 ```
 
-## Try, catch y throw. Manejo de excepciones es Javascript
+## Try, catch y throw. Manejo de excepciones en Javascript
 
 La sentencia <code>try</code> permite definir un bloque de código que se prueba contra errores al tiempo que se va ejecutando. Mientras que la sentencia <code>catch</code> permite definir el bloque de código que se va a ejecutar en caso de que haya ocurrido un error (excepción) cuando se ejecutaba el bloque definido por <code>try</code>.
 
@@ -837,7 +837,7 @@ catch(err){
 }
 ```
 
-Para crear errores personalizados (definidos por el programador) se puede utilizar la sentencia <code>throw</code>. Esta sentencia permite lanzar un error o excepción que puede ser de alguno de los siguientes tipos: String, Number, Boolean u Object.
+Para crear errores personalizados (definidos por el programador) se puede utilizar la sentencia <code>throw</code>. Esta sentencia permite lanzar un error o excepción que puede ser de alguno de los siguientes tipos: String, Number, Boolean, Object o un objeto de alguno de los tipos de error nativos de Javascript (Error, SyntaxError, ReferenceError, TypeError, EvalError, RangeError, URIError).
 
 ```js
 throw "ha ocurrido un error";
@@ -847,6 +847,7 @@ throw {
    code: 404,
    message: "not found"
 }
+throw new Error("algo inusual acaba de ocurrir!");
 ```
 
 [Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CLYoxDgIhFAX7f4oXqt3GYGGFlh6EsOxCQnjmgzFmw93NqlPOTGBtHSuJGy7WiXR9YxcAyCumI1xxtnb%2BuYOelC%2BYuyrVuK8eMiT4HtIUVf9rYG0s8VS4TcaXjcg1tkdUvxDJg%2BGpmhea2cn4AA%3D%3D)
@@ -866,5 +867,85 @@ catch(err){
 
 ## Ejecución asincrónica: async, await y promises
 
+La ejecución asincrónica de una aplicación se refiere a la habilidad de poder correr tareas que requieren de mucho tiempo de procesamiento sin necesidad de bloquear la ejecución normal del programa. Es decir, que a pesar de que se inicie la ejecución de una tarea que toma mucho tiempo en completar se puedan correr otras tareas y atender otros eventos mientras que la tarea de larga ejecución se completa.
 
+Las funciones asincrónicas en Javascript permiten:
 
+<ol>
+    <li>Inicializar una tarea u operación que toma mucho tiempo mediante el llamado de una función.</li>
+    <li>Permitir que la funcion inicie la tarea y retorne inmediatamente para que el programa pueda ejecutar otras funciones o eventos.</li>
+    <li>La función ejecuta la tarea sin necesidad de bloquear el hilo principal de ejecución de la aplicación.</li>
+    <li>La función notifica acerca del resultado de la tarea una vez esta se completa (eventualmente).</li>
+</ol>
+
+### Promise
+
+La programación asincrónica en Javascript orbita alrededor del concepto de <code>Promise</code> (promesa), que es simplemente un objeto retornado por una función asincrónica y sirve para representar el estado en el que se encuentra la tarea de larga ejecución que fue iniciada por la función. El objeto <code>Promise</code> debe proporcionar métodos que permitan atender el eventual éxito o falla al completar la ejecución de la tarea.
+
+Al usar <code>Promise</code> la función asincrónica da inicio a la tarea e inmediatamente retorna un objeto <code>Promise</code>. Luego, se pueden asociar <code>handlers</code> a ese objeto <code>Promise</code> para que sean ejecutados una vez la tarea se complete exitosamente o bien falle.
+
+Handlers más comunes para trabajar con objetos <code>Promise</code>:
+
+<ul>
+    <li><code>.then()</code>: Permite manejar el resultado de la tarea asincrónica cuando el resultado de la ejecución fue exitoso.</li>
+    <li><code>.catch()</code>: Permite manejar el resultado de la tarea asincrónica cuando la promesa fue rechazada, es decir, la operación lanzó un error.</li>
+    <li><code>.all()</code>: Permite manejar en una sola promesa todos los resultados de varias promesas asociadas a distintas funciones asincrónicas.</li>
+    <li><code>.race()</code>: Permite manejar a través de una promesa el resultado de la primera promesa en ser resuelta o rechazada de un conjunto de promesas asociadas a distintas funciones asincrónicas.</li>
+</ul>
+
+Una promesa, <code>Promise</code>, es algo que va a tomar cierto tiempo en ser completado y tiene 3 estados posibles: pendiente, completada o rechazada. Por tanto, una tarea asincrónica estará es progreso mientras la promesa no se haya completado. De allí que una promesa que alcanza el estado completado indica la ejecución exitosa de una tarea asincrónica.
+
+Las promesas <code>Promise</code> se pueden crear utilizando el constructor de <code>Promise</code> de Javascript. Este constructor es una función que toma como argumento de entrada a otra función que se conoce como el <i>executor</i>.
+
+El <i>executor</i> es una función que tiene dos argumentos de entrada llamados <i>resolve</i> y <i>reject</i> que también son funciones. Entonces, en la lógica del <i>executor</i> se hace el llamado de la función asincrónica. Si la función se ejecuta exitosamente entonces se llama la función resolve y si no entonces se llama a la función reject. De hecho, si la función asincrónica lanza una excepción entonces la función reject es llamada de forma automática.
+
+```js
+let promise = new Promise((resolve, reject) => {
+   // este es el executor y aqui se debe llamar la funcion asincronica
+});
+```
+
+Ejemplo:
+
+```js
+function alarma(nombre, tiempo) {
+  return new Promise((resolve, reject) => {
+    if (tiempo < 0) {
+      throw new Error("el tiempo para la alarma no puede ser negativo");
+    }
+    setTimeout(() => {
+      resolve(`Beeep beeep beeep despierta, ${nombre}!`);
+    }, tiempo);
+  });
+}
+```
+
+Para manejar el objeto de la promesa se utilizan los handlers que vimos anteriormente (se puede hacer encadenamiento de handlers):
+
+```js
+alarma('estudiante', 5000)
+   .then((respuesta) => console.log(respuesta))
+   .catch((err) => console.log(`error: ${err}`));
+```
+
+### async y await
+
+<code>async</code> y <code>await</code> son idiomas de Javascript que permiten escribir código asincrónico de manera que luzca como código sincrónico, dicho de otro modo, con esas palabaras de Javascript se puede escribir código que parece que se ejecuta de forma secuencial cuando en realidad lo hace de manera asincrónica.
+
+<code>async</code> y <code>await</code> simplifican la lectura y escritura de operaciones asincrónicas evitando las confusiones inherentes de utilizar handlers para atender las promesas de una función asincrónica.
+
+La palabra <code>async</code> se utiliza para indicar que el bloque de código de una función se debe ejecutar de manera asincrónica. Por su parte, la palabra <code>await</code> solo puede usarse dentro de una función construida con <code>async</code> e indica que se debe esperar por la ejecución de cierta línea de código, en particular la ejecución de una función asincrónica que retorna una promesa, dicho de otro modo <code>await</code> pausa laejecución hasta que se complete o rechace la promesa.
+
+Reescribiendo el ejemplo anterior con <code>async</code> y <code>await</code>:
+
+```js
+(async () => {
+    try{
+        const res = await alarma('estudiante', 5000);
+        console.log(res);
+    }
+    catch(err){
+        console.log(err);
+    }
+})();
+```
