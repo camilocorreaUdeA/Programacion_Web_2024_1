@@ -826,6 +826,44 @@ console.log(carrito.getOwner());
 
 ## Try, catch y throw. Manejo de excepciones es Javascript
 
+La sentencia <code>try</code> permite definir un bloque de código que se prueba contra errores al tiempo que se va ejecutando. Mientras que la sentencia <code>catch</code> permite definir el bloque de código que se va a ejecutar en caso de que haya ocurrido un error (excepción) cuando se ejecutaba el bloque definido por <code>try</code>.
+
+```js
+try{
+   // Bloque de codigo a ejecutar y probar contra errores
+}
+catch(err){
+   // Bloque de codigo a ejecutar cuando ocurre algun error
+}
+```
+
+Para crear errores personalizados (definidos por el programador) se puede utilizar la sentencia <code>throw</code>. Esta sentencia permite lanzar un error o excepción que puede ser de alguno de los siguientes tipos: String, Number, Boolean u Object.
+
+```js
+throw "ha ocurrido un error";
+throw 404;
+throw true;
+throw {
+   code: 404,
+   message: "not found"
+}
+```
+
+[Ejemplo:](https://codapi.org/embed/?engine=browser&sandbox=javascript&code=data%3A%3Bbase64%2CLYoxDgIhFAX7f4oXqt3GYGGFlh6EsOxCQnjmgzFmw93NqlPOTGBtHSuJGy7WiXR9YxcAyCumI1xxtnb%2BuYOelC%2BYuyrVuK8eMiT4HtIUVf9rYG0s8VS4TcaXjcg1tkdUvxDJg%2BGpmhea2cn4AA%3D%3D)
+
+```js
+const foo = 50;
+
+try {
+    if (foo < 100){
+        throw "Error";
+    }
+}
+catch(err){
+    console.log("algo inesperado ha ocurrido");
+}
+```
+
 ## Ejecución asincrónica: async, await y promises
 
 
