@@ -911,6 +911,20 @@ Ejemplo:
 function alarma(nombre, tiempo) {
   return new Promise((resolve, reject) => {
     if (tiempo < 0) {
+      reject("el tiempo para la alarma no puede ser negativo");
+    }
+    setTimeout(() => {
+      resolve(`Beeep beeep beeep despierta, ${nombre}!`);
+    }, tiempo);
+  });
+}
+```
+O lanzando un error (excepción):
+
+```js
+function alarma(nombre, tiempo) {
+  return new Promise((resolve, reject) => {
+    if (tiempo < 0) {
       throw new Error("el tiempo para la alarma no puede ser negativo");
     }
     setTimeout(() => {
