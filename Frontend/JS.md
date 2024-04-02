@@ -952,17 +952,17 @@ Reescribiendo el ejemplo anterior con <code>async</code> y <code>await</code>:
 
 ## Recursos recomendados
 
-[https://htmlcheatsheet.com/js/](https://htmlcheatsheet.com/js/)
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
-[https://www.w3schools.com/js/js_promise.asp](https://www.w3schools.com/js/js_promise.asp)
-[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-[https://semaphoreci.com/blog/asynchronous-javascript](https://semaphoreci.com/blog/asynchronous-javascript)
-[https://www.scaler.com/topics/types-of-errors-in-javascript/](https://www.scaler.com/topics/types-of-errors-in-javascript/)
-[https://developer.mozilla.org/en-US/docs/Learn/JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-[https://learnjavascript.online/](https://learnjavascript.online/)
-[https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-[https://eloquentjavascript.net/](https://eloquentjavascript.net/)
-[https://www.javascripttutorial.net/](https://www.javascripttutorial.net/)
+[https://htmlcheatsheet.com/js/](https://htmlcheatsheet.com/js/)<br>
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)<br>
+[https://www.w3schools.com/js/js_promise.asp](https://www.w3schools.com/js/js_promise.asp)<br>
+[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)<br>
+[https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises)<br>
+[https://semaphoreci.com/blog/asynchronous-javascript](https://semaphoreci.com/blog/asynchronous-javascript)<br>
+[https://www.scaler.com/topics/types-of-errors-in-javascript/](https://www.scaler.com/topics/types-of-errors-in-javascript/)<br>
+[https://developer.mozilla.org/en-US/docs/Learn/JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)<br>
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)<br>
+[https://learnjavascript.online/](https://learnjavascript.online/)<br>
+[https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)<br>
+[https://eloquentjavascript.net/](https://eloquentjavascript.net/)<br>
+[https://www.javascripttutorial.net/](https://www.javascripttutorial.net/)<br>
 [https://javascript.info/](https://javascript.info/)
