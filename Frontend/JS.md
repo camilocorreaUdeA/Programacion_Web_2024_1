@@ -944,11 +944,11 @@ alarma('estudiante', 5000)
 
 ### async y await
 
-<code>async</code> y <code>await</code> son idiomas de Javascript que permiten escribir código asincrónico de manera que luzca como código sincrónico, dicho de otro modo, con esas palabaras de Javascript se puede escribir código que parece que se ejecuta de forma secuencial cuando en realidad lo hace de manera asincrónica.
+<code>async</code> y <code>await</code> son idiomas de Javascript que permiten escribir código asincrónico de manera que luzca como código sincrónico, dicho de otro modo, con esas palabras de Javascript se puede escribir código que parece que se ejecuta de forma secuencial cuando en realidad lo hace de manera asincrónica.
 
 <code>async</code> y <code>await</code> simplifican la lectura y escritura de operaciones asincrónicas evitando las confusiones inherentes de utilizar handlers para atender las promesas de una función asincrónica.
 
-La palabra <code>async</code> se utiliza para indicar que el bloque de código de una función se debe ejecutar de manera asincrónica. Por su parte, la palabra <code>await</code> solo puede usarse dentro de una función construida con <code>async</code> e indica que se debe esperar por la ejecución de cierta línea de código, en particular la ejecución de una función asincrónica que retorna una promesa, dicho de otro modo <code>await</code> pausa laejecución hasta que se complete o rechace la promesa.
+La palabra <code>async</code> se utiliza para indicar que el bloque de código de una función se debe ejecutar de manera asincrónica. Por su parte, la palabra <code>await</code> solo puede usarse dentro de una función construida con <code>async</code> e indica que se debe esperar por la ejecución de cierta línea de código, en particular la ejecución de una función asincrónica que retorna una promesa, dicho de otro modo <code>await</code> pausa la ejecución hasta que se complete o rechace la promesa.
 
 Reescribiendo el ejemplo anterior con <code>async</code> y <code>await</code>:
 
