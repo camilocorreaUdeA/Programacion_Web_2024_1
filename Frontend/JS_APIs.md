@@ -106,4 +106,73 @@ const url = 'https://pokeapi.co/api/v2/pokemon/ditto';
     }
 })();
 ```
+## Incluyendo Javascript en la aplicación web
+
+### El código de nuestros scripts
+
+Anteriormente habíamos visto como incluir estilos CSS para dar estilo al documento HTML. Pudimos conocer 3 alternativas para incluir las reglas CSS: a través de un archivo independiente <code>styles.css</code>, utilizando el elemento <code>style</code> dentro del elemento <code>head</code> o bien mediante el atributo <code>style</code> de cada elemento por separado.
+
+Con Javascript se puede implementar lógica que permite desarrollar una aplicación web dinámica que está en capacidad de interactuar con el usuario y de hacer solicitudes a APIs de REST para consultar recursos alojados en la web.
+
+Para incluir código de Javascript en una aplicación web existen dos alternativas basadas en el elemento <code>script</code> que proporciona HTML:
+
+1. Código en un archivo separado de extensión .js: Desarrollar toda la lógica con Javascript en uno o varios archivos independientes con extensión .js y luego incluir los archivos en el documento HTML con el elemento <code>script</code> utilizando el atributo <code>src</code> para dar la ruta a los archivos y los atributos booleanos <code>async</code> o <code>defer</code> para que el código solo ejecute una vez todo el documento HTML ha sido cargado por completo. El elemento <code>script</code> se puede poner como contenido de los elementos <code>head</code> o <code>body</code> de manera indistinta. Por convención se acostumbra en ponerlo en el elemento <code>head</code> luego de la inclusión de los archivos de estilo CSS.
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <script src="scripts/script.js" async></script>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+2. Código directamente en el documento HTML: En este caso se incluye el código Javascript como contenido del elemento <code>script</code>.
+
+```html
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+       const code = "<h1>Web Apps Development</h1>";
+       document.body.innerHTML = code;
+    </script>
+  </body>
+</html>
+```
+
+### Paquetes de terceros
+
+Los paquetes de terceros (que no vienen incluidos de forma nativa en Javascript), como en el caso de <code>axios</code> se deben incluir en el documento HTML de forma explícita utilizando la primera alternativa de las dos que vimos anteriormente. En la documentación oficial de cada paquete externo se suele indicar la forma de incluirlo. Por ejemplo en el caso de axios, la documentación proporciona estas alternativas que utilizan CDN (Content Delivery/Distribution Network):
+
+CDN: jsDelivr
+
+```js
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+```
+
+CDN: unpkg
+
+```js
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
+Y luego se debe importar el paquete externo en el código Javascript donde se van a utilizar sus funciones:
+
+Importando usando el viejo estilo de Javascript (con <code>require</code>)
+
+```js
+const axios = require('axios');
+```
+
+Importando con el nuevo estilo (con <code>import</code>)
+
+```js
+import axios from 'axios';
+```
+   
+
 
