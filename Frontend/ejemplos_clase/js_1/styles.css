@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .user {
+    width: 230px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    vertical-align: top;
+    margin-right: 15px;
+    padding: 5px 5px;
+  }
+  
+  .user-pic {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+  
+  .user-name .user-email {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8px;
+    margin-bottom: 5px;
+  }
