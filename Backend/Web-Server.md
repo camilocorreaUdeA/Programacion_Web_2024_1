@@ -87,6 +87,8 @@ type Header map[string][]string
 
 ## Implementación de un servidor web básico con http.Handle
 
+[Ejemplo disponible aquí](ejemplos_clase/go_basic_web_server)
+
 ```go
 package main
 
@@ -159,6 +161,8 @@ func ListenAndServe(addr string, handler Handler) error
 Esta función ejecuta dos tareas en un solo llamado. En primer lugar se encarga de escuchar (esperar solicitudes HTTP) en la dirección y puerto que se especifican en el parámetro <code>addr</code> y luego invoca atiende la solicitud a través de la implementación disponible en el parámetro <code>handler</code>. Cuando se pasa un handler <code>nil</code> (nulo) entonces se invocan los handlers asociados al multiplexor por defecto del paquete <code>net/http</code> (DefaultServeMux).
 
 ## Implementando el mismo servidor web básico con http.HandlerFunc
+
+[Ejemplo disponible aquí](ejemplos_clase/go_basic_web_server)
 
 ```go
 package main
