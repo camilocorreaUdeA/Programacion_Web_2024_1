@@ -2,11 +2,11 @@
 
 ## Paquete net/http de la librería estándar de Go
 
-El paquete <code>net</code> proporciona una interfaz portable para procesos de red (networking) que incluye implementaciones para el establecimiento y mantenimiento de conexiones a través de los protocolos TCP/IP y UDP, resolución de nombres de dominio con el porotocolo DNS y conexiones a dominios de Unix a través de web sockets.
+El paquete <code>net</code> proporciona una interfaz portable para procesos de red (networking) que incluye implementaciones para el establecimiento y mantenimiento de conexiones a través de los protocolos <b>TCP/IP</b> y <b>UDP</b>, resolución de nombres de dominio con el porotocolo <b>DNS</b> y conexiones a dominios de Unix a través de web sockets.
 
-El paquete <code>net</code> proporciona las funciones básicas y de bajo nivel para la conexión a redes de transmisión de datos, donde las interfaces más importantes y de uso más extendido son las que proporcionan la función <code>Dial</code> (que retorna un objeto de conexión a un sistema remoto con alguno de los protocolos TCP/IP o UDP) y la función <code>Listen</code> (crea un objeto que permite escuchar activamente en un puerto TCP/IP o UDP).
+El paquete <code>net</code> proporciona las funciones básicas y de bajo nivel para la conexión a redes de transmisión de datos, donde las interfaces más importantes y de uso más extendido son las que proporcionan la función <code>Dial</code> (que retorna un objeto de conexión a un sistema remoto con alguno de los protocolos <b>TCP/IP</b> o <b>UDP</b>) y la función <code>Listen</code> (crea un objeto que permite escuchar activamente en un puerto <b>TCP/IP</b> o <b>UDP</b>).
 
-Dial: Permite conectarse a un servidor
+<b>Dial: Proporiciona una interfaz de bajo nivel para abrir una conexión a un servidor</b>
 
 ```go
 conn, err := net.Dial("tcp", "golang.org:80")
@@ -18,7 +18,7 @@ status, err := bufio.NewReader(conn).ReadString('\n')
 // ...
 ```
 
-Listen: Crea un servidor
+<b>Listen: Proporciona una interfaz de bajo nivel que permite que un servidor escuche (espere) en un puerto por conexiones de clientes</b>
 
 ```go
 ln, err := net.Listen("tcp", ":8080")
@@ -36,7 +36,7 @@ for {
 
 A partir de las interfaces proporcionadas por el paquete <code>net</code> se contruye el paquete <code>net/http</code> que cuenta con implementaciones de gran utilidad para el despliegue de clientes y sevidores HTTP con Go, entre las que se distinguen:
 
-Constantes para los métodos HTTP:
+<b>Constantes para los métodos HTTP</b>
 
 ```go
 const (
@@ -47,7 +47,7 @@ const (
   // ...
 )
 ```
-Constantes para los códigos de estatus de solicitudes y respuestas HTTP:
+<b>Constantes para los códigos de estatus de solicitudes y respuestas HTTP</b>
 
 ```go
 const (
@@ -64,7 +64,7 @@ const (
 )
 ```
 
-Funciones para instanciar servidores HTTP y atender solicitudes HTTP
+<b>Funciones para instanciar servidores HTTP y atender solicitudes HTTP</b>
 
 ```go
 ServeHTTP(w http.ResponseWriter, r *http.Request)
@@ -73,7 +73,7 @@ http.HandleFunc("/endpoint", handler)
 http.ListenAndServe("direccion:puerto", nil)
 ```
 
-Tipos
+<b>Tipos</b>
 
 ```go
 type Client struct{}
@@ -123,17 +123,17 @@ func main() {
 <code>http.Request</code> es un tipo (struct) del paquete <code>net/http</code> para representar una solicitud recibida en un servidor HTTP y enviada desde un cliente HTTP. Algunos campos relevantes del tipo Request son: 
 
 <ol>
-  <li>Method: es un string que indica el método HTTP de la solicitud. Un string vacío equivale a una solicitud GET.</li>
-  <li>Header: este campo del tipo http.Header (map[string][]string) contiene los encabezados incluídos en la solicitud.</li>
-  <li>Body: Este campo contiene el cuerpo de la solicitud. Relevante en solicitudes POST, PUT o PATCH.</li>
+  <li><b>Method:</b> es un string que indica el método HTTP de la solicitud. Un string vacío equivale a una solicitud GET.</li>
+  <li><b>Header:</b> este campo del tipo http.Header (map[string][]string) contiene los encabezados incluídos en la solicitud.</li>
+  <li><b>Body:</b> Este campo contiene el cuerpo de la solicitud. Relevante en solicitudes POST, PUT o PATCH.</li>
 </ol>
 
 <code>http.ResponseWriter</code> es una interfaz que define los métodos necesarios para construir la respuesta a una solicitud HTTP, y son los que listan a continuación:
 
 <ol>
-  <li>Header() Header: Retorna los encabezados que se van a enviar en la respuesta HTTP. Se pueden agregar encabezados con el método Set del tipo http.Header</li>
-  <li>Write([]byte)(int, error): Escribe los datos de la espuesta HTTP y los envía al cliente a través de la conexión establecida previamente entre cliente y servidor.</li>
-  <li>WriteHeader(statusCode int): Este método permite indicar el código de estatus de la respuesta. Por defecto se envía un código http.StatusOK</li>
+  <li><b>Header() Header:</b> Retorna los encabezados que se van a enviar en la respuesta HTTP. Se pueden agregar encabezados con el método Set del tipo http.Header</li>
+  <li><b>Write([]byte)(int, error):</b> Escribe los datos de la espuesta HTTP y los envía al cliente a través de la conexión establecida previamente entre cliente y servidor. Para hacer el código del ejemplo más expresivo se reemplazó el llamado directo a esta función por <code>io.WriteString(w, msg)</code> que escribe el string msg directamente en el ResponseWriter w.</li>
+  <li><b>WriteHeader(statusCode int):</b> Este método permite indicar el código de estatus de la respuesta. Por defecto se envía un código http.StatusOK</li>
 </ol>
 
 ### http.Handle
