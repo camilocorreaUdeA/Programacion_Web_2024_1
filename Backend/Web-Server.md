@@ -6,7 +6,7 @@ El paquete <code>net</code> proporciona una interfaz portable para procesos de r
 
 El paquete <code>net</code> proporciona las funciones básicas y de bajo nivel para la conexión a redes de transmisión de datos, donde las interfaces más importantes y de uso más extendido son las que proporcionan la función <code>Dial</code> (que retorna un objeto de conexión a un sistema remoto con alguno de los protocolos <b>TCP/IP</b> o <b>UDP</b>) y la función <code>Listen</code> (crea un objeto que permite escuchar activamente en un puerto <b>TCP/IP</b> o <b>UDP</b>).
 
-<b>Dial: Proporiciona una interfaz de bajo nivel para abrir una conexión a un servidor</b>
+<b>Dial: Proporciona una interfaz de bajo nivel para abrir una conexión a un servidor</b>
 
 ```go
 conn, err := net.Dial("tcp", "golang.org:80")
