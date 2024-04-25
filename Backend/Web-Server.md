@@ -2,7 +2,7 @@
 
 ## Paquete net/http de la librería estándar de Go
 
-El paquete <code>net</code> proporciona una interfaz portable para procesos de red (networking) que incluye implementaciones para el establecimiento y mantenimiento de conexiones a través de los protocolos <b>TCP/IP</b> y <b>UDP</b>, resolución de nombres de dominio con el porotocolo <b>DNS</b> y conexiones a dominios de Unix a través de web sockets.
+El paquete <code>net</code> proporciona una interfaz portable para procesos de red (networking) que incluye implementaciones para el establecimiento y mantenimiento de conexiones a través de los protocolos <b>TCP/IP</b> y <b>UDP</b>, resolución de nombres de dominio con el protocolo <b>DNS</b> y conexiones a dominios de Unix a través de web sockets.
 
 El paquete <code>net</code> proporciona las funciones básicas y de bajo nivel para la conexión a redes de transmisión de datos, donde las interfaces más importantes y de uso más extendido son las que proporcionan la función <code>Dial</code> (que retorna un objeto de conexión a un sistema remoto con alguno de los protocolos <b>TCP/IP</b> o <b>UDP</b>) y la función <code>Listen</code> (crea un objeto que permite escuchar activamente en un puerto <b>TCP/IP</b> o <b>UDP</b>).
 
