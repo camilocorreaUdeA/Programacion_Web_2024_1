@@ -34,8 +34,8 @@ func (bd *BaseDatos) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			http.Error(w, "fallo al codificar en json", http.StatusInternalServerError)
 		}
-		w.WriteHeader(http.StatusOK)
 		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)		
 		w.Write(jsonComent)
 	} else if r.Method == http.MethodPost {
 		body, err := io.ReadAll(r.Body)
