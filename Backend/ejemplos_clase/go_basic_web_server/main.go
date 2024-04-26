@@ -16,8 +16,8 @@ type CustomHandler struct {
 func (ch *CustomHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	ch.numConn++
 	ch.msg = fmt.Sprintf("Se ha conectado al servidor. Conexion numero: %d\n", ch.numConn)
-	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "text/plain")
+	w.WriteHeader(http.StatusOK)
 	io.WriteString(w, ch.msg)
 }
 
@@ -26,8 +26,8 @@ func (ch *CustomHandler) Handler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		ch.numConn++
 		ch.msg = fmt.Sprintf("Se ha conectado al servidor. Conexion numero: %d\n", ch.numConn)
-		w.WriteHeader(http.StatusOK)
 		w.Header().Set("Content-Type", "text/plain")
+		w.WriteHeader(http.StatusOK)		
 		io.WriteString(w, ch.msg)
 	}
 }
