@@ -75,6 +75,7 @@ Para que el proceso de de-serialización se complete correctamente se requiere q
 ```go
 import "encoding/json"
 
+//"mascota" es un objeto JSON (slice de byte)... que viene en el body de una solicitud HTTP por ejemplo
 mascota := []byte(`{
   "nombre": "Chispita",
   "especie": "Gato",
@@ -95,6 +96,9 @@ if err != nil{
 
 //utilice el objeto de-serializado "chispita"...
 //por ejemplo para guardarlo en una base de datos o procesar sus campos de manera independiente ...
-
 ```
+
+## Handlers: Manejadores para atender solicitudes HTTP a los endpoints (rutas a servicios) expuestos por un servidor web
+
+
 
