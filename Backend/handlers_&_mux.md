@@ -100,5 +100,116 @@ if err != nil{
 
 ## Handlers: Manejadores para atender solicitudes HTTP a los endpoints (rutas a servicios) expuestos por un servidor web
 
+### Handler
+
+Un web handler, handler HTTP, o simplemente handler es un componente de software del lado del servidor cuya tarea es la de atender peticiones web (solicitudes utilizando los métodos del protocolo HTTP) que son enviadas desde clientes (navegadores, aplicaciones móviles, dispositivos IoT, etc.) a los servicios expuestos por un servidor web. El handler es el encargado de recibir la petición, procesarla y devolver una respuesta al cliente.
+
+El paquete <code>net/http</code> de Go ofrece dos alternativas para la implementación de handlers, la primera está basada en la construcción del handler a partir de un objeto de una estructura que implementa la interfaz <code>Handler</code> incluída en el paquete. La segunda, se basa en la implementación del handler a través de una función que retorne una función del tipo <code>HandlerFunc</code> que no es más que un adaptador del paquete que implementa la interfaz <code>Handler</code>.
+
+### Implementación de un handler con http.Handler
+
+La interfaz Handler del paquete <code>net/http</code> está definida así:
+
+```go
+type Handler interface {
+  ServeHTTP(ResponseWriter, *Request)
+}
+```
+De modo que para implementar esta interfaz a través de un tipo concreto basta con solo con implementar el método <code>ServeHTTP</code>.
+
+Una vez implementada la interfaz se completa el handler al asociar un objeto del tipo concreto (el que implementa la interfaz) a una ruta o endpoint que va a permitir conformar la URL necesaria para exponer recursos en la aplicación web. 
+
+Para asociar una ruta a un handler implementado con http.Handler se utiliza la función <code>Handle</code> que recibe como argumentos un patrón o cadena de caracteres para identificar la ruta o endpoint mediante el que se expone el servicio y un objeto del tipo que implementa la interfaz Handler.
+
+Ejemplo:
+```go
+package main
+
+import (
+  "log"
+  "net/http"
+)
+
+type CustomHandler struct {}
+
+func (ch *CustomHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+  switch r.Method {
+    case http.MethodGet:
+      // atienda una peticion GET al endpoint
+    case http.MethodPost:
+      // atienda una peticion POST al endpoint
+    // ... otros metodos HTTP
+    default:
+      http.Error(w, "metodo no permitido", http.StatusMethodNotAllowed)
+   }
+}
+
+func main() {
+  handler := &CustomHandler{}
+  http.Handle("/hello", handler)
+  log.Fatal(http.ListenAndServe(":8080", nil))
+}
+```
+### Implementación de un handler con http.HandlerFunc
+
+```go
+package main
+
+import (
+  "log"
+  "net/http"
+)
+
+type CustomHandler struct{}
+
+func Handler(ch *CustomHandler) http.HandlerFunc {
+  return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    if r.Method == http.MethodGet {
+      ch.get()
+      //respuesta a la peticion
+    }
+    if r.Method == http.MethodPost {
+      ch.post()
+      //respuesta a la peticion
+    }
+    //...atender peticiones con otros metodos
+  })
+}
+
+func (ch *CustomHandler) get() {
+  //procesamiento de peticion GET
+}
+
+func (ch *CustomHandler) post() {
+  //procesamiento de peticion POST
+}
+
+func main() {
+  handler := &CustomHandler{}
+  http.HandleFunc("/hello", Handler(handler))
+  log.Fatal(http.ListenAndServe(":8080", nil))
+}
+```
+
+## Multiplexers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
