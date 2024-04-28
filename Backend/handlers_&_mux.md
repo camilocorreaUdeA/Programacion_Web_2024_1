@@ -274,6 +274,16 @@ func main() {
 
 ### Otros mux/routers disponibles para desarrollo web en Go
 
+Hay otros mux/routers disponibles como paquetes de terceros para aplicaciones web desarrolladas con Go. A continuación una lista de los más populares y de uso más extendido:
+
+<ul>
+   <li>gorilla/mux: https://github.com/gorilla/mux</li>
+   <li>go-chi: https://github.com/go-chi/chi</li>
+   <li>bone: https://github.com/go-zoo/bone</li>
+   <li>http-router: https://github.com/julienschmidt/httprouter</li>
+   <li>luci-go: https://chromium.googlesource.com/infra/luci/luci-go</li>
+</ul>
+
 
 
 
