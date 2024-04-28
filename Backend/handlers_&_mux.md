@@ -201,7 +201,28 @@ func main() {
 }
 ```
 
-## Multiplexers
+## Multiplexers o Routers
+
+Un multiplexer o router HTTP es un componente que permite encontrar una coincidencia entre una solicitud (petición) que llega al servidor y una lista de rutas o endpoints que se han registrado en la aplicación web. Una vez se encuentra una coincidencia se invoca el handler que ha sido asociado a esa ruta en particular.
+
+### ¿Cuál es el próposito o beneficio de utilizar un mux o router?
+
+De acuerdo con el autor Alex Edwards en un artículo publicado en su blog personal (https://www.alexedwards.net/blog/which-go-router-should-i-use) algunos de los beneficios de utilizar un mux o router para implementar un servidor web son:
+
+<ul>
+   <li><b>Soporte a enrutamiento basado en el método de la solicitud: </b>Utilizar un mux/router debería facilitar el despacho de las solicitudes a los handlers basandose en el método con el que se realizó la solicitud</li>
+   <li><b>Soporte a variables en la ruta de la URL del endpoint: </b>Debería facilitar la declaración de endpoints como <code>/empleados/{id}</code> donde "{id}" es un parámetro dinámico (variable) en la URL del endpoint.</li>
+   <li><b>Soporte a patrones de endpoints con expresiones regulares (regex): </b>El mux/router facilita la construcción de endpoints mediante el uso de expresiones regulares y además encuentra el "match" o la coincidencia con el handler que se debe ejecutar.</li>
+   <li><b>Soporte a rutas basadas en host o nombre de dominio: </b>El mux/router permite despachar solicitudes a handlers basandose en la URL del host o nombre de dominio en lugar de solamente la URL de la ruta del endpoint.</li>
+   <li><b>Soporte a rutas en conflicto: </b>Se refiere a que el mux/router esté en capacidad de registrar patrones de enrutamiento que podrían potencialmente coincidir con la ruta a la que va dirigida la solicitud.</li>
+</ul>
+
+### http.ServeMux del paquete <code>net/http</code>
+
+### Otros mux/routers disponibles para desarrollo web en Go
+
+
+
 
 
 
