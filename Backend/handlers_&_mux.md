@@ -15,9 +15,9 @@ Ejemplo de datos serializados utilizando JSON:
    "edad": 5,
    "sexo": "F",
    "detalles": {
-       "adoptado": true,
-       "congenitas": [],
-       "estado": "optimo"
+     "adoptado": true,
+     "congenitas": [],
+     "estado": "optimo"
    }
 }
 ```
@@ -117,9 +117,9 @@ type Handler interface {
 ```
 De modo que para implementar esta interfaz a través de un tipo concreto basta con solo con implementar el método <code>ServeHTTP</code>.
 
-Una vez implementada la interfaz se completa el handler al asociar un objeto del tipo concreto (el que implementa la interfaz) a una ruta o endpoint que va a permitir conformar la URL necesaria para exponer recursos en la aplicación web. 
+Una vez implementada la interfaz se completa el handler al asociar el objeto que implementa la interfaz http.Handler a la ruta o endpoint que va a exponer el servicio de la aplicación web. 
 
-Para asociar una ruta a un handler implementado con http.Handler se utiliza la función <code>Handle</code> que recibe como argumentos un patrón o cadena de caracteres para identificar la ruta o endpoint mediante el que se expone el servicio y un objeto del tipo que implementa la interfaz Handler.
+Dicha asociación se hace al invocar la función <code>http.Handle</code> que recibe como argumentos un patrón o cadena de caracteres que identifica la ruta o endpoint mediante el que se expone el servicio y un objeto del tipo que implementa la interfaz http.Handler.
 
 Ejemplo:
 ```go
@@ -152,6 +152,16 @@ func main() {
 ```
 ### Implementación de un handler con http.HandlerFunc
 
+El adaptador <code>http.HandlerFunc</code> funciona como un alias para las funciones con la firma <code>func (ResponseWriter, *Request)</code>. Este adaptador implementa la interfaz http.Handler de la siguiente manera:
+
+```go
+func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
+  f(w, r)
+}
+```
+Para implementar un handler con http.HandlerFunc basta con crear una función que retorne precisamente un valor de ese tipo. Y luego asociarlo a una ruta o endpoint con la función <code>http.HandleFunc</code> que recibe como argumentos un patrón o cadena de caracteres que identifica la ruta o endpoint mediante el que se expone el servicio y una función con firma <code>func (ResponseWriter, *Request)</code>, o sea un http.HandlerFunc.
+
+Ejemplo:
 ```go
 package main
 
