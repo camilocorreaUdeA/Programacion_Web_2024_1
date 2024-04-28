@@ -219,6 +219,59 @@ De acuerdo con el autor Alex Edwards en un artículo publicado en su blog person
 
 ### http.ServeMux del paquete <code>net/http</code>
 
+<code>ServeMux</code> es el multiplexer para solicitudes HTTP que está incluído en la librería estándar de Go. Su funcionalidad principal es encontrar una correspondencia entre la URL a la que está dirigida la solicitud y un conjunto de patrones registrados contra unos handlers. La coincidencia más cercana será la que ejecute el handler correspondiente.
+
+<code>ServeMux</code> puede encontrar correspondencias con patroness por método, nombre de dominio o ruta de la solicitud. En general, un patrón consta de las siguientes partes: <code>[MÉTODO ][HOST]/[RUTA]</code>, las 3 partes son opcionales y el caracter / es una ruta válida.
+
+<ul>
+   <li><b>/index.html </b>coincide la ruta index/html para cualquier host y cualquier método.</li>
+   <li><b>GET /static/ </b>coincide cualquier solicitud GET cuya ruta comienza por /static/</li>
+   <li><b>example.com/ </b>coincide cualquier solicitud al host example.com</li>
+   <li><b>example.com/{$} </b>coincide la solicitud con el host example.com y la ruta /</li>
+   <li><b>/files/{file}/photos/{photo} </b>coincide con las rutas cuyo primer segmento es files y el tercer segmento es photos. Los segmentos file y photo pueden ser valores dinámicos.</li>
+</ul>
+
+Ejemplo:
+
+```go
+package main
+
+import (
+  "log"
+  "net/http"
+)
+
+type HandlerComentarios struct{}
+
+func (hc *HandlerComentarios) listComentarios() http.HandlerFunc {
+  return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    //procesamiento de peticion GET que devuelve lista de comentarios
+  })
+}
+
+func (hc *HandlerComentarios) getComentario() http.HandlerFunc {
+  return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    //procesamiento de peticion GET que devuelve un solo comentario
+  })
+}
+
+func (hc *HandlerComentarios) crearComentario() http.HandlerFunc {
+  return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+    //procesamiento de peticion POST
+  })
+}
+
+func main() {
+  mux := http.NewServeMux()
+  handler := &HandlerComentarios{}
+  mux.HandleFunc("GET /comentarios", handler.listComentarios())
+  mux.HandleFunc("GET /comentarios/{id}", handler.getComentario())
+  mux.HandleFunc("POST /comentarios", handler.crearComentario())
+
+  log.Fatal(http.ListenAndServe(":8080", mux))
+}
+```
+
 ### Otros mux/routers disponibles para desarrollo web en Go
 
 
