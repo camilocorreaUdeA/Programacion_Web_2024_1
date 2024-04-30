@@ -8,9 +8,9 @@ La idea con este proyecto es poner en práctica todos los conceptos aprendidos a
 
 <ul>
   <li>Definición de la estructura y contenido de un sitio web (cliente de la aplicación web) con el lenguaje HTML</li>
-  <li>Aplicación de estilos al sitio web con el lenguaje de hojas de estilo en cascáda CSS</li>
-  <li>Implementación de clientes de API REST con Javascript</li>
-  <li>Contenido dinámico y lógica del cliente web con Javascript</li>
+  <li>Aplicación de estilos al sitio web con las reglas de hojas de estilo en cascáda CSS</li>
+  <li>Implementación de clientes de API REST con las librerías de Javascript</li>
+  <li>Contenido dinámico y lógica del cliente web con Javascript (DOM)</li>
   <li>Implementación de los servicios o capa de servidor de una aplicación web con el lenguaje de programación Go</li>
   <li>Implementación de una capa de repositorio en el servidor mediante el uso de un motor de base de datos</li>
   <li>Despliegue de la aplicación web utilizando contenedores (Docker)</li>
@@ -63,10 +63,35 @@ Al usuario se le deben proporcionar en la apliación los servicios necesarios pa
 
 ## Aplicación Web para reserva de automóviles
 
-### Endpoints expuestos por el servidor
+### Endpoints sugeridos para ser expuestos por el servidor
 
-<b>admin</b>
-<b>registro</b>
-<b>login</b>
-<b>reservar</b>
-<b>reporte</b>
+Son sugeridos porque últimamente pueden ser los que ustedes como desarrolladores decidan tener en su aplicación web
+
+<b>registro:</b> Esta es una ruta para permitir dar de alta a nuevos usuarios en la aplicación.
+
+<b>usuarios:</b> Esta ruta base debería permitir validar las credenciales de un usuario que ya se ha registrado en la aplicación. También debería estar en capacidad de retornar los detalles asociados a las reservas de un usuario en específico (cantidad de reservas a su nombre en el momento, etc.)
+
+<b>autos:</b> Esta ruta estaría encargada de todo el proceso de búsqueda de los autos para reservar de acuerdo a múltiples criterios como por ejemplo: tipo (sedan o SUV), tipo de transmisión (automática o manual), tipo de combustible (gasolina, gas, híbrido o eléctrico), modelo, marca, etc.
+
+<b>reservas:</b> Esta ruta está asociada a toda la lógica del proceso de reserva. Retorna la lista de automóviles a nombre de un usuario, crea la reserva en la base de datos, etc.
+
+<b>reporte:</b> Esta ruta debería retornar la información consolidada de las reservas de un usuario y el total a pagar para confirmar dichas reservas.
+
+### Funcionamiento básico de la aplicación
+
+En el <code>home</code> o página principal se debe presentar un elemento para que un usuario: 1. se registre en la aplicación, si es la primera vez que la usa, o bien 2. se autentique si es que ya se había registrado previamente.
+
+Cuando un usuario va a registrarse se debe presentar una página en la que se recolecten datos básicos de identidad del usuario. Pero lo más importante es registrar un nombre de usuario y una contraseña que van a ser las credenciales de autenticación de ese usuario en la aplicación.
+
+Cuando un usuario se autentica exitosamente entonces se carga una página de reservas en la que se muestra una sección con las reservas asociadas actualmente al usuario (lista con los automóviles reservados por ese usuario), una sección para hacer una nueva reserva que tiene un buscador que sirve para consultar los automóviles disponibles de acuerdo con algún criterio de búsqueda tipo (sedan o SUV), tipo de transmisión (automática o manual), tipo de combustible (gasolina, gas, híbrido o eléctrico), modelo, marca, etc. La búsqueda debe retornar la lista de automóviles para reservar que se ajustan al/los criterios de búsqueda.
+
+La lista de autómoviles se debe mostrar como una galería de tarjetas en donde en cada tarjeta se puede observar una imagen del automóvil y algunos detalles adicionales (marca, modelo, combustible, etc).
+
+Al seleccionar una tarjeta se debe cargar un menú de opciones en el que se muestren adicionales de la reserva, tales como seguros, asistencia en carretera, silla para bebés, equipo de lujo, etc. Además de un botón Reservar que debe crear la reserva y un botón Cancelar para descartar la reserva de ese autómovil.
+
+Se debe poder contar con una opción para que el usuario elimine una reserva que ya no quiere tener.
+
+Esta pagína también debe contar con un botón Reporte que al ser presionado carga en una sección un informe con las reservas del usuario y el detalle de los costos de la reserva junto con el precio total que debería ser cancelado para confirmar las reservas.
+
+
+
