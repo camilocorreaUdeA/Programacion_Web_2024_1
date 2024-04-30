@@ -91,7 +91,7 @@ Al seleccionar una tarjeta se debe cargar un menú de opciones en el que se mues
 
 Se debe poder contar con una opción para que el usuario elimine una reserva que ya no quiere tener.
 
-Esta pagína también debe contar con un botón Reporte que al ser presionado carga en una sección un informe con las reservas del usuario y el detalle de los costos de la reserva junto con el precio total que debería ser cancelado para confirmar las reservas.
+Esta página también debe contar con un botón Reporte que al ser presionado carga en una sección un informe con las reservas del usuario y el detalle de los costos de la reserva junto con el precio total que debería ser cancelado para confirmar las reservas.
 
 
 
