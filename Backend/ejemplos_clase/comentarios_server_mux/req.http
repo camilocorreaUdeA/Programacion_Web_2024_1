@@ -1,0 +1,16 @@
+
+GET /posts HTTP/1.1
+Host: localhost:8080
+
+GET /posts/10 HTTP/1.1
+Host: localhost:8080
+
+POST /posts HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "timestamp": "2024-04-25T19:39:00.269214-05:00",
+    "comment": "aqui con mis mascotas",
+    "reactions": 0
+}
