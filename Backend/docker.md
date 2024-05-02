@@ -18,6 +18,8 @@ Suele confundirse a los contenedores con máquinas virtuales, pero son dos conce
 
 ### Docker
 
+![image](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/a2ae551c-dfa8-493a-90f0-381bb6a4cfd4)
+
 Docker es una plataforma de software de código abierto (open source) que le permite a los desarrolladores construir, probar y desplegar aplicaciones de manera ágil utilizando contenedores. Docker brinda las herramientas necesarias para empaquetar una aplicación con sus dependencias, configuraciones, librerías dentro de un contenedor como una única entidad de sorftware. Esta característica permite automatizar y agilizar el despliegue de una aplicación para que sea ejecutada en cualquier sistema operativo anfitrion.
 
 Las aplicaciones construidas con Docker se pueden desplegar fácilmente sin tener en consideración el sistema operativo. De ahí se desprende que sea más fácil para los desarrolladores crear aplicaciones sin incurrir en problemas o inconvenientes ya que la aplicación va a estar aislada del resto de procesos que están corriendo en el sistema operativo anfitrion.
