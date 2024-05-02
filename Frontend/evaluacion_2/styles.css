@@ -1,0 +1,172 @@
+p{
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    text-shadow: yellow;
+    margin: 0px;
+}
+h1{
+    color: black;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h2{
+    color: black;
+    font-weight: bolder;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+}
+
+.containerInfo{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(218, 213, 213);
+    width: 600px;
+    height: auto;
+    border-radius: 30px;
+    border: black 10px solid;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.containerName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+}
+.containerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+}
+.containerDescription{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.containerType{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.containerHabilities{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.containerError{
+    margin-top: 40px;
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    border: rgb(65, 65, 240) 10px solid;
+    background-color: rgb(240, 206, 13);
+    font-size: 14px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.containerError p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.containerEvolution{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.imgLogo{
+    width: 400px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+.pokemonImg{
+    width:350px;
+    height: auto;
+}
+
+.containerFinder{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerFinder input{
+    background-color: rgb(240, 206, 13);
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    border-color: rgb(65, 65, 240);
+    border-width: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    text-decoration-color: black;
+}
+.containerFinder button{
+    background: rgb(240, 206, 13);
+    border-radius: 50%;
+    border-color: rgb(65, 65, 240);
+    border-width: 5px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.containerEvolution button{
+    background-color: rgb(240, 206, 13);
+    text-align: center;
+    width: 400px;
+    height: 70px;
+    border-radius: 20px;
+    border-color: rgb(65, 65, 240);
+    border-width: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 0%;
+}
+
+.containerFinder button img{
+    width: 16px;
+}
+.containerHabilities p{
+    margin-bottom: 10px;
+}
+main, body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
