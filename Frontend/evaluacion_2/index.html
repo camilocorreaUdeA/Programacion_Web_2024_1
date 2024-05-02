@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca tú Pokémon</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>    
+    <main>
+        <header>
+            <a href="index.html" > 
+                <img src="pokemon.png" class="imgLogo"/> 
+            </a>
+        </header>
+        <div class="containerFinder">
+            <input type="text" id="in1" placeholder="Ingrese el nombre de su pokemón">
+            <button class="buttonSearch"><img src="search.png"> </button>
+        </div>     
+        <div class="containerError">
+            <p>Vaya! algo salió mal. <br>
+            Es posible que el nombre de tu pokemón este mal escrito. <br>
+            Por favor revisa e intenta nuevamente. </p>
+        </div>
+
+        <div class="containerInfo">
+            <div class="containerName">
+                <h1 class="pokemonName"></h1>
+            </div>
+            <div class="containerImg">
+                <img src="" class="pokemonImg">
+            </div>
+            <div class="containerType">
+                <h2 >Tipo: </h2>
+                <p class="pokemonType"></p>
+            </div>
+            <div class="containerDescription">
+                <h2>Descripción: </h2>
+                <p class="pokemonDescrition"></p>
+            </div>
+            <div class="containerHabilities">
+                <h2>Habilidades: </h2>
+                <p class="pokemonAbilities"></p>
+            </div>
+        </div>
+        <div class="containerEvolution">
+            <button class="buttonEvolution">Evolucionar</button>
+        </div>
+    </main>
+</body>
+</html>
