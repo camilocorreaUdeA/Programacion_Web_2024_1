@@ -145,11 +145,29 @@ docker container ls
 ```
 9. Pruebe la aplicación
 
-Visite la URL localhost:8080 en el navegador o haga una petición GET a esa misma URL y verifique la respuesta esperada de la aplicación.
+Visite la URL <code>localhost:8080</code> en el navegador o haga una petición GET a esa misma URL y verifique la respuesta esperada de la aplicación.
+
+10. Detenga el contenedor
+
+```bash
+docker container stop {nombre-contenedor}
+```
+11. Elimine el contenedor
+
+```bash
+docker rm --force {nombre-contenedor}
+```
+Si quiere profundizar más en el uso de Docker puede consultar las guías oficiales de comandos de Dockerfile (https://docs.docker.com/reference/dockerfile/) y Docker (https://docs.docker.com/reference/cli/docker)
 
 ### Desplegando con docker-compose
 
+Hemos visto como desplegar una aplicación sencilla de Go en un contenedor de Docker, esto es especialmente útil cuando vamos a desplegar una aplicación web usando una arquitectura de microservicios donde cada aplicación de servicio web construída con Go se puede desplegar en su propio contenedor e independiente de los demás servicios.
 
+AHora el próposito será conectar nuestro contenedor con otras aplicaciones también desplegadas en sus propios contenedores de Docker, por ejemplo, si queremos conectar una aplicación de backend con una instancia de un motor de base de datos que también corra sobre un contenedor. ¿Cómo se puede lograr el despliegue de varios contenedores simultáneamente y que puedan existir canales de comunicación entre ellos?
+
+Para ese propósito la tecnología Docker ofrece la herramienta <b><i>docker compose</i></b> que permite desplegar aplicaciones construídas con múltiples contenedores de manera sencilla a través de un simple archivo de configuración en formato YAML (https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started). 
+
+Entonces, en un archivo llamado <code>docker-compose.yml</code> se definen todos los contenedores que van a hacer parte de la aplicación y una vez está listo el archivo se ejecuta un comando para activar todos los servicios (contenedores). Además, de manera automática se crea también una red de datos interna que permite la comunicación entre los contenedores que componen la aplicación.
 
 
 
