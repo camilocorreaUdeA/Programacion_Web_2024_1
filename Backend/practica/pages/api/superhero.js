@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     const options = {
       method: "GET",
-      url: "http://localhost:8080/api/",
+      url: "http://localhost:3000/api/",
       params: { hero: req.query.name },      
     };
 
