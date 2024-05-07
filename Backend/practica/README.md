@@ -60,6 +60,8 @@ npm run dev
 ```
 En este punto debería estar listo para ver la app funcionando Abra el navegador en [localhost:3000](http://localhost:3000/) para que acceda a la interfaz de usuario.
 
+Entrega: Responder al correo (y por favor solo a ese correo :-D) de entrega (que se va a enviar en el transcurso de la semana). Donde debe incluir compartir el enlace al repositorio del backend. SOLO DEL BACKEND, EL FRONTEND QUE LES ESTOY COMPARTIENDO YO YA LO TENGO.
+
 Recursos:
 
 Spiderman
