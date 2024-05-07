@@ -6,41 +6,32 @@
 
 > [Live Preview](https://rapidapi-example-superhero-app.vercel.app/)
 
-### ⚡️ Features
-
-- Search for your favorite superhero.
-- Mobile friendly
-
-## 📖 Guide
-
-[*Read how we build this application*](https://rapidapi.com/guides/build-superhero-app)
-
 ### 🛠️ Installation Steps
 
-1. Download the `superhero-app` directory. Click [here](https://download-directory.github.io/?url=https://github.com/RapidAPI/DevRel-Examples-External/tree/main/superhero-app) to download it.
+1. Clona los archivos de este repositorio
 
-2. Unzip the downloaded file and navigate to the working directory.
+2. Abra la carpeta donde se alojaron los archivos
 
-```bash
-cd RapidAPI\ DevRel-Examples-External\ main\ superhero-app/
-```
-
-3. Install dependencies
+3. Instale las dependencias
 
 ```bash
 npm install
 ```
 
-4. Create `.env.local` file in root and add your variables
+4. Crea una aplicación de backend que exponga un endpoint para obtener los datos de los superhéroes.
+
+<ul>
+	<li></li>
+</ul>
+
+5. Ponga en ejecución la aplicación de backend
 
 ```bash
-NEXT_PUBLIC_RAPIDAPI_KEY=YOUR_RAPID_API_KEY
+go run main.go
 ```
-
-5. Run the app
+6. Ponga en ejecución esta app
 
 ```bash
 npm run dev
 ```
-
-You are all set! Open [localhost:3000](http://localhost:3000/) to see the app.
+En este punto debería estar listo para ver la app funcionando Abra el navegador en [localhost:8080](http://localhost:8080/) y observe los resultados.
