@@ -18,11 +18,35 @@
 npm install
 ```
 
-4. Crea una aplicación de backend que exponga un endpoint para obtener los datos de los superhéroes.
+4. Crea una aplicación de backend que exponga un endpoint para obtener los datos de algunos superhéroes.
 
-<ul>
-	<li></li>
-</ul>
+a. El servidor debe exponer un único endpoint <code>/api/superhero</code> que solo recibe peticiones de tipo <code>GET</code> en el puerto 8080 de localhost<br>
+b. El nombre del súperheroe se pasa en la solicitud en un <code>query parameter</code> denominado <code>hero</code> (/api/superhero?hero={nombre})<br>
+c. Tenga disponibles datos en un almacenamiento en memoria para devolver información de por lo menos 5 súperheroes distintos.<br>
+d. El formato del body de la respuesta de la API es el siguiente:
+
+```json
+{
+    "name": "Wolverine",
+    "biography": {
+        "fullName": "John Logan"
+    },
+    "powerstats": {
+        "intelligence": 63,
+        "strength": 32,
+        "speed": 50,
+        "durability": 100,
+        "power": 89,
+        "combat": 100
+    },
+    "images": {
+        "xs": "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/xs/717-wolverine.jpg",
+        "sm": "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/sm/717-wolverine.jpg",
+        "md": "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/md/717-wolverine.jpg",
+        "lg": "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/717-wolverine.jpg"
+    }
+}
+```
 
 5. Ponga en ejecución la aplicación de backend
 
@@ -34,4 +58,4 @@ go run main.go
 ```bash
 npm run dev
 ```
-En este punto debería estar listo para ver la app funcionando Abra el navegador en [localhost:8080](http://localhost:8080/) y observe los resultados.
+En este punto debería estar listo para ver la app funcionando Abra el navegador en [localhost:3000](http://localhost:3000/) para que acceda a la interfaz de usuario.
