@@ -18,7 +18,7 @@ comentarios que se hacen en una red social
 */
 func main() {
 
-	conn, err := ConectarDB("postgres://frtzcnqy:pYvsWxUKNQhG6xtFFqAj6sdTZdoc0lvB@chunee.db.elephantsql.com/frtzcnqy", "postgres")
+	conn, err := ConectarDB("url_de_conexion_a_la_BD_SQL", "postgres")
 	if err != nil {
 		log.Fatalln("error conectando a la base de datos", err.Error())
 	}
