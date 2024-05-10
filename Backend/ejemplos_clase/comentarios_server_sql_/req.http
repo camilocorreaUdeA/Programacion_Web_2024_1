@@ -1,0 +1,32 @@
+GET /posts HTTP/1.1
+Host: localhost:8080
+
+
+GET /posts/2 HTTP/1.1
+Host: localhost:8080
+
+
+PATCH /posts/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "comment": "AQUI CON MIS MASCOTAS :)"
+}
+
+
+DELETE /posts/3 HTTP/1.1
+Host: localhost:8080
+
+
+POST /posts HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "time": "2024-04-25T19:39:00Z",
+    "comment": "Comentario para eliminar",
+    "reactions": 5
+}
+
+
