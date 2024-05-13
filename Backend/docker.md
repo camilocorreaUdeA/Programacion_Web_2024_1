@@ -194,7 +194,7 @@ EXPOSE 8080
 ```
 En resumen se está construyendo una imagen de Docker para nuestra aplicación de backend a partir de la imagen <code>golang:1.22.2</code>, y luego se construye el binario de la aplicación con el nombre godocker y se expone el puerto 8080 en el contenedor para la API REST. Observe que a diferencia del Dockerfile que habíamos hecho en el ejemplo anterior, en este no hay un comando <code>CMD</code> y es porque la ejecución del contenedor la vamos a controlar desde otro archivo llamado <code>docker-compose.yml</code>.
 
-4. Agregue un archivo <code>.env</code> al proyecto, en este archivo se van a definir unas variables de ambiente que van a permitir establecer la conexión de la aplicación de backend al motor de base de datos PostgreSQL. El archivo debe verse así:
+4. Agregue un archivo <code>.env</code> al proyecto, en este archivo se van a definir unas variables de ambiente que van a permitir establecer la conexión desde la aplicación de backend al motor de base de datos PostgreSQL. El archivo debe verse así:
 
 ```env
 DB_USER={usuario_base_datos}
@@ -264,7 +264,7 @@ VALUES
 ('2023-10-14 07:33:12', 'Estaban pasando bueno, no? xD', 10)
 ('2024-04-29 23:59:59', 'Felicitaciones, se ven muy bien juntos', 5)
 ('2022-12-30 12:11:45', 'Happy New Year!', 20)
-('2024-04-29 23:59:59', 'You look great!', 2) RETURNING id;
+('2024-04-29 23:59:59', 'You look great!', 2);
 ```
 5.3 Agregando el contenedor de la aplicación de backend definido en el archivo Dockerfile:
 
