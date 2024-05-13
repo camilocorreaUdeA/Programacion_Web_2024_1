@@ -33,7 +33,6 @@ func ConectarDB(url, driver string) (*sqlx.DB, error) {
 
 func main() {
 	/* creando un objeto de conexión a PostgreSQL */
-	//db, err := ConectarDB("postgres://frtzcnqy:pYvsWxUKNQhG6xtFFqAj6sdTZdoc0lvB@chunee.db.elephantsql.com/frtzcnqy", "postgres")
 	db, err := ConectarDB(fmt.Sprintf("postgres://%s:%s@db:%s/%s?sslmode=disable", os.Getenv("DB_USER"),
 		os.Getenv("DB_PASSWORD"), os.Getenv("DB_PORT"), os.Getenv("DB_NAME")), "postgres")
 	if err != nil {
