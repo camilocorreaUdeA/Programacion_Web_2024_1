@@ -163,11 +163,140 @@ Si quiere profundizar más en el uso de Docker puede consultar las guías oficia
 
 Hemos visto como desplegar una aplicación sencilla de Go en un contenedor de Docker, esto es especialmente útil cuando vamos a desplegar una aplicación web usando una arquitectura de microservicios donde cada aplicación de servicio web construída con Go se puede desplegar en su propio contenedor e independiente de los demás servicios.
 
-AHora el próposito será conectar nuestro contenedor con otras aplicaciones también desplegadas en sus propios contenedores de Docker, por ejemplo, si queremos conectar una aplicación de backend con una instancia de un motor de base de datos que también corra sobre un contenedor. ¿Cómo se puede lograr el despliegue de varios contenedores simultáneamente y que puedan existir canales de comunicación entre ellos?
+Ahora el próposito será conectar nuestro contenedor con otras aplicaciones también desplegadas en sus propios contenedores de Docker, por ejemplo, si queremos conectar una aplicación de backend con una instancia de un motor de base de datos que también corra sobre un contenedor. ¿Cómo se puede lograr el despliegue de varios contenedores simultáneamente y que existan por defecto canales de comunicación entre ellos?
 
 Para ese propósito la tecnología Docker ofrece la herramienta <b><i>docker compose</i></b> que permite desplegar aplicaciones construídas con múltiples contenedores de manera sencilla a través de un simple archivo de configuración en formato YAML (https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started). 
 
 Entonces, en un archivo llamado <code>docker-compose.yml</code> se definen todos los contenedores que van a hacer parte de la aplicación y una vez está listo el archivo se ejecuta un comando para activar todos los servicios (contenedores). Además, de manera automática se crea también una red de datos interna que permite la comunicación entre los contenedores que componen la aplicación.
+
+Por favor siga atentamente los pasos descritos a continuación para desplegar una aplicación de backend (un CRUD sencillo) que estará conectado a una base de datos PostgreSQL en contenedores de Docker utilizando la herramienta <b><i>docker compose</i></b>.
+
+1. Cree un nuevo módulo de Go y agregue el código fuente que se encuentra aquí.
+2. Ejecute en la terminal los comandos <code>go mod download</code> y <code>go mod tidy</code> para actualizar el árbol de dependencias del proyecto (esto actualizará los archivos go.mod y go.sum)
+
+```bash
+go mod download
+go mod tidy
+```
+3. Agregue un archivo <code>Dockerfile</code> al proyecto, en este archivo se definirá el contenedor para la aplicación de backend. Debe quedar como se muestra a continuación:
+
+```docker
+FROM golang:1.22.2
+
+WORKDIR /app
+
+COPY . .
+RUN go mod download
+
+RUN go build -o /godocker
+
+EXPOSE 8080
+```
+En resumen se está construyendo una imagen de Docker para nuestra aplicación de backend a partir de la imagen <code>golang:1.22.2</code>, y luego se construye el binario de la aplicación con el nombre godocker y se expone el puerto 8080 en el contenedor para la API REST. Observe que a diferencia del Dockerfile que habíamos hecho en el ejemplo anterior, en este no hay un comando <code>CMD</code> y es porque la ejecución del contenedor la vamos a controlar desde otro archivo llamado <code>docker-compose.yml</code>.
+
+4. Agregue un archivo <code>.env</code> al proyecto, en este archivo se van a definir unas variables de ambiente que van a permitir establecer la conexión de la aplicación de backend al motor de base de datos PostgreSQL. El archivo debe verse así:
+
+```env
+DB_USER={usuario_base_datos}
+DB_PASSWORD={password_base_datos}
+DB_NAME={nombre_base_datos}
+DB_PORT=5432
+```
+Los valores entre {} los puede escoger a su elección pero debe tenerlos muy presentes a la hora de definir el contenedor que desplegará la base de datos.<br>
+Observe en el archivo <code>main.go</code> en la función <code>main</code> la invocación a la función que establece la conexión a la base de datos, <code>ConectarDB</code>, los valores que se mapean allí para componer la URL de conexión a la base de datos son tomados precisamente desde el archivo <code>.env</code>
+
+```go
+db, err := ConectarDB(fmt.Sprintf("postgres://%s:%s@db:%s/%s?sslmode=disable", os.Getenv("DB_USER"),
+		os.Getenv("DB_PASSWORD"), os.Getenv("DB_PORT"), os.Getenv("DB_NAME")), "postgres")
+	if err != nil {
+		log.Fatalln("error conectando a la base de datos", err.Error())
+		return
+	}
+```
+5. Agregue un archivo <code>docker-compose.yml</code> al proyecto, en este archivo se va a definir la infraestructura de la aplicación, en este ejemplo en particular consta de dos componentes: contenedor aplicación de backend en Go y contenedor de base de datos PostgreSQL.
+
+Los componentes de la infraestructura se instancian en el archivo como servicios y volúmenes. Un servicio es un contenedor que despliega una funcionalidad o servicio de la aplicación, por ejemplo, la aplicación de backend o una base de datos. Mientras que los volúmenes son persistencias o almacenamientos de datos que utilizan los servicios (pueden ser reutilizados por múltiples servicios).
+
+En el archivo <code>docker-compose.yml</code> defina una sección para los servicios de la aplicación (contenedores) y otra para los vólumenes o persistencias de datos compartidas entre los servicios:
+
+```docker
+services:
+
+volumes:
+```
+
+
+5.1 Agregando el contenedor de base datos PostgreSQL:
+
+Agregue un servicio de base de datos a la sección de servicios del archivo <code>docker-compose.yml</code>. Este contenedor se construye a partir de la imagen <code>postgres:alpine</code>, configura el usuario, password y nombre de la base de datos a partir de los valores asignados a las variables en el archivo <code>.env</code>, también expone y mapea el puerto por el que se establece la conexión a la base de datos (5432, puerto por defecto del servicio de base de datos SQL) y finalmente se instala o monta el volúmen de datos en la ruta <code>/var/lib/postgresql/data</code> con el nombre <code>postgres-db</code> y una vez inicializada la base de datos se corre un comando que a su vez ejecuta las sentencias SQL que se definan en un archivo llamado <code>queries.sql</code> que se encuentra en la raíz del proyecto. Este último archivo es muy útil para inicializar la base de datos creando las tablas y populando las filas y columnas con datos. El archivo <code>docker-compose.yml</code> debe verse así por el momento:
+
+```docker
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+      - ./queries.sql:/docker-entrypoint-initdb.d/create_tables.sql
+
+volumes:
+  postgres-db:
+```
+5.2 Agregue el archivo <code>queries.sql</code> para inicializar la base de datos:
+
+Las sentencias de SQL que se encuentran en este archivo serán ejecutadas para inicializar la base de datos, incluye la creación de la tabla y unos datos iniciales en la misma. Este archivo debe agregarse a la raíz del proyecto de backend ya que en el archivo <code>docker-compose.yml</code> en la sección de volúmenes del servicio de base de datos se indicó que se buscara allí ese archivo para ser ejecutado una vez el contenedor se encuentre corriendo.
+
+```sql
+CREATE TABLE IF NOT EXISTS comentarios(
+  id SERIAL PRIMARY KEY,
+  time TIMESTAMP,
+  comment TEXT,
+  reactions INT
+);
+
+INSERT INTO comentarios (time, comment, reactions) 
+VALUES
+('2023-10-14 07:33:12', 'Estaban pasando bueno, no? xD', 10)
+('2024-04-29 23:59:59', 'Felicitaciones, se ven muy bien juntos', 5)
+('2022-12-30 12:11:45', 'Happy New Year!', 20)
+('2024-04-29 23:59:59', 'You look great!', 2) RETURNING id;
+```
+5.3 Agregando el contenedor de la aplicación de backend definido en el archivo Dockerfile:
+
+```docker
+services:
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+      - ./queries.sql:/docker-entrypoint-initdb.d/create_tables.sql
+  web:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+    command: go run main.go -b 0.0.0.0
+
+volumes:
+  postgres-db:
+```
+
+
+
 
 
 
