@@ -159,6 +159,8 @@ docker rm --force {nombre-contenedor}
 ```
 Si quiere profundizar más en el uso de Docker puede consultar las guías oficiales de comandos de Dockerfile (https://docs.docker.com/reference/dockerfile/) y Docker (https://docs.docker.com/reference/cli/docker)
 
+Puede encontrar el ejemplo completo [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/tree/main/Backend/ejemplos_clase/go_docker)
+
 ### Desplegando con docker-compose
 
 Hemos visto como desplegar una aplicación sencilla de Go en un contenedor de Docker, esto es especialmente útil cuando vamos a desplegar una aplicación web usando una arquitectura de microservicios donde cada aplicación de servicio web construída con Go se puede desplegar en su propio contenedor e independiente de los demás servicios.
@@ -171,7 +173,7 @@ Entonces, en un archivo llamado <code>docker-compose.yml</code> se definen todos
 
 Por favor siga atentamente los pasos descritos a continuación para desplegar una aplicación de backend (un CRUD sencillo) que estará conectado a una base de datos PostgreSQL en contenedores de Docker utilizando la herramienta <b><i>docker compose</i></b>.
 
-1. Cree un nuevo módulo de Go y agregue el código fuente que se encuentra aquí.
+1. Cree un nuevo módulo de Go y agregue el código fuente que se encuentra [aquí](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/tree/main/Backend/ejemplos_clase/go_docker_compose).
 2. Ejecute en la terminal los comandos <code>go mod download</code> y <code>go mod tidy</code> para actualizar el árbol de dependencias del proyecto (esto actualizará los archivos go.mod y go.sum)
 
 ```bash
