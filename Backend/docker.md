@@ -294,6 +294,83 @@ services:
 volumes:
   postgres-db:
 ```
+La aplicación de backend se incluye en la infraestructura dentro de la sección de servicios, depués del servicio de base de datos (rotulado db) se agrega un servicio rotulado como "web" y en cuya descripción se indica a docker que agregue un contenedor que se construye a partir de los archivos Dockerfile que existan en la raíz del proyecto, que tenga en cuenta los valores para las variables de ambiente definidas en el archivo <code>.env</code> (para componer la URL de conexión a la base de datos). Además se expone el puerto 8080 para que el servidor escuche las solicitudes a los endpoints de la aplicación, se determina la ruta de instalación del volúmen de persistencia de datos en la misma ruta definida como directorio de trabajo del contenedor en el Dockerfile y además se expresa un comando para correr la aplicación una vez se activan las intancias de los contenedores.
+
+### Levantar las instancias de los contenedores
+
+Llegados a este punto con los archivos <code>Dockerfile</code> y <code>docker-compose.yml</code> completos se procede a ejecutar los contenedores para poder poner la palicación en funcionamiento. Para levantar construir las imágenes y levantar los contenedores ubiquese en la ruta donde está el archivo <code>docker-compose.yml</code> y ejecute el siguiente comando:
+
+```bash
+docker compose up
+```
+Debería observar una salida similar a la siguente en la terminal (cerciorese de que no haya salidas en la terminal con exit status mayor a 0):
+
+<img width="1175" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/48bcf646-ad0b-4705-8139-f417d3df0243">
+<img width="1182" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/81b1b5c9-c094-4abf-9ad6-3ba4f448b181">
+
+En este punto ya debe estar en capacidad de conectarse a la aplicación de backend en el puerto 8080 y tener acceso a los endpoints
+
+![image](https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/afb04dfb-185d-4d7b-ace4-a9016fe38a19)
+
+Para detener la aplicación basta con teclear Ctrl + C
+
+<img width="590" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/5480b22c-29ed-4ca2-89a3-14c196faeeba">
+
+Verifique las imágenes creadas por docker-compose
+
+```bash
+docker images -a
+```
+<img width="1154" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/b3ca4b95-266e-4cab-bee5-291c5baa3aac">
+
+Verifique los contenedores que se levantaron
+
+```bash
+sudo docker ps -a
+```
+<img width="1179" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/665c4ff9-4d13-4cdc-bcc5-a6dc2ac5e875">
+
+Verifique los volúmenes para la persistencia de datos
+
+```bash
+docker volume ls
+```
+<img width="795" alt="image" src="https://github.com/camilocorreaUdeA/Programacion_Web_2024_1/assets/42076547/5a363f0f-10fb-499b-bec8-5c2d62498fe9">
+
+Otros comando útiles:
+
+Remover un contenedor de Docker
+
+```bash
+docker rm {ID-contenedor}
+```
+Remover una imagen de Docker
+
+```bash
+docker rmi {ID-imagen}
+```
+Remover un volúmen de datos de Docker
+
+```bash
+docker volume rm {nombre-volumen}
+```
+
+Enlaces útiles del tema:
+
+1. https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+2. https://docs.docker.com/reference/dockerfile/
+3. https://docs.docker.com/compose/gettingstarted/
+4. https://docs.docker.com/compose/compose-application-model/
+5. https://spacelift.io/blog/docker-compose
+6. https://hub.docker.com/_/postgres/
+7. https://geshan.com.np/blog/2021/12/docker-postgres/
+8. https://www.youtube.com/watch?v=p08c0-99SyU
+9. https://www.youtube.com/watch?v=aLVJY-1dKz8
+10. https://www.youtube.com/watch?v=ioa02xkqRII
+11. https://www.youtube.com/watch?v=p1dwLKAxUxA
+
+
+
 
 
 
